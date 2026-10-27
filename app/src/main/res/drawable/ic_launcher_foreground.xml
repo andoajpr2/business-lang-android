@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Briefcase / Padfolio main body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,42 C32,38.7 34.7,36 38,36 L70,36 C73.3,36 76,38.7 76,42 L76,72 C76,75.3 73.3,78 70,78 L38,78 C34.7,78 32,75.3 32,72 Z" />
+
+    <!-- Briefcase handle -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M46,36 L46,31 C46,29.3 47.3,28 49,28 L59,28 C60.7,28 62,29.3 62,31 L62,36" />
+
+    <!-- Tricolor decorative stripe across center -->
+    <!-- Bleu -->
+    <path
+        android:fillColor="#1E40AF"
+        android:pathData="M48,50 L52,50 L52,64 L48,64 Z" />
+    <!-- Blanc/Gris clair -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M52,50 L56,50 L56,64 L52,64 Z" />
+    <!-- Rouge -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M56,50 L60,50 L60,64 L56,64 Z" />
+
+    <!-- Speech bubble badge at top right -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M66,32 C66,28.7 68.7,26 72,26 L78,26 C81.3,26 84,28.7 84,32 L84,38 C84,41.3 81.3,44 78,44 L72,44 L67,48 L68,44 C66.8,43.2 66,41.7 66,40 Z" />
+
+    <!-- Dot inside speech bubble -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M71,34 A2,2 0 1 1 71,34.01 M75,34 A2,2 0 1 1 75,34.01 M79,34 A2,2 0 1 1 79,34.01" />
+
+</vector>

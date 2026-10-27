@@ -1,0 +1,6 @@
+{
+  "name": "Français Pro",
+  "description": "Application Android pour apprendre le français technique et professionnel au bureau, en réunion et en relation client.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

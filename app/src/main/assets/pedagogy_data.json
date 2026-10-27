@@ -1,0 +1,697 @@
+{
+  "modules": [
+    {
+      "id": "mod_bureau_projet",
+      "title": "Vie de bureau & Gestion de projet",
+      "description": "Communication quotidienne, coordination d'équipe, planification agile, jalons et gestion des imprévus.",
+      "iconName": "work",
+      "level": "Débutant / Intermédiaire"
+    },
+    {
+      "id": "mod_reunions",
+      "title": "Réunions & Prise de parole",
+      "description": "Ouvrir une séance, cadrer le timing, donner son avis, objecter avec diplomatie et rédiger la synthèse.",
+      "iconName": "groups",
+      "level": "Intermédiaire"
+    },
+    {
+      "id": "mod_client",
+      "title": "Relation Client & Négociation",
+      "description": "Accueillir un client, cerner son besoin, argumenter avec conviction, gérer les réclamations et conclure.",
+      "iconName": "handshake",
+      "level": "Intermédiaire / Avancé"
+    },
+    {
+      "id": "mod_ecrits_appels",
+      "title": "Écrits professionnels & Appels",
+      "description": "Emails percutants, comptes rendus, messages instantanés Slack/Teams et gestion des appels téléphoniques.",
+      "iconName": "mail",
+      "level": "Débutant / Intermédiaire"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "les_salutations_bureau",
+      "moduleId": "mod_bureau_projet",
+      "title": "Salutations et échanges quotidiens au bureau",
+      "contextSummary": "Prendre contact avec bienveillance, demander de l'aide, remercier et clarifier un message.",
+      "order": 1
+    },
+    {
+      "id": "les_vocabulaire_projet",
+      "moduleId": "mod_bureau_projet",
+      "title": "Vocabulaire de projet : délais, jalons et arbitrages",
+      "contextSummary": "Discuter des plannings, prioriser les tâches, identifier les risques et livrer dans les temps.",
+      "order": 2
+    },
+    {
+      "id": "les_emails_pros",
+      "moduleId": "mod_ecrits_appels",
+      "title": "Emails et messages professionnels percutants",
+      "contextSummary": "Rédiger des objets percutants, structurer ses demandes et relancer sans froisser.",
+      "order": 1
+    },
+    {
+      "id": "les_appels_pros",
+      "moduleId": "mod_ecrits_appels",
+      "title": "Gestion des appels téléphoniques et visios",
+      "contextSummary": "Prendre un appel, faire patienter, transférer un interlocuteur et laisser un message vocal clair.",
+      "order": 2
+    },
+    {
+      "id": "les_ouvrir_reunion",
+      "moduleId": "mod_reunions",
+      "title": "Ouvrir une réunion et poser le cadre",
+      "contextSummary": "Accueillir les participants, présenter l'ordre du jour et définir le temps imparti.",
+      "order": 1
+    },
+    {
+      "id": "les_intervenir_reunion",
+      "moduleId": "mod_reunions",
+      "title": "Prendre la parole et objecter avec diplomatie",
+      "contextSummary": "Interrompre poliment, marquer son accord ou formuler une réserve constructive.",
+      "order": 2
+    },
+    {
+      "id": "les_accueil_client",
+      "moduleId": "mod_client",
+      "title": "Accueillir un client et qualifier son besoin",
+      "contextSummary": "Instaurer un climat de confiance, pratiquer l'écoute active et reformuler la demande.",
+      "order": 1
+    },
+    {
+      "id": "les_reclamation_client",
+      "moduleId": "mod_client",
+      "title": "Gérer une réclamation et négocier un accord",
+      "contextSummary": "Désamorcer les tensions, proposer des solutions pérennes et clore un litige de façon positive.",
+      "order": 2
+    }
+  ],
+  "expressions": [
+    {
+      "id": "exp_01",
+      "lessonId": "les_salutations_bureau",
+      "frenchText": "Aurais-tu un instant pour qu'on fasse un point rapide ?",
+      "explanation": "Façon courtoise et non intrusive de solliciter l'attention d'un collègue sur un sujet précis.",
+      "exampleUsage": "Bonjour Thomas, aurais-tu un instant pour qu'on fasse un point rapide sur le dossier Dupont ?",
+      "category": "BUREAU",
+      "level": "DEBUTANT",
+      "keywords": ["point rapide", "collègue", "disponibilité", "demande"]
+    },
+    {
+      "id": "exp_02",
+      "lessonId": "les_salutations_bureau",
+      "frenchText": "Je te remercie chaleureusement pour ta réactivité sur ce dossier.",
+      "explanation": "Formule valorisante pour remercier un partenaire ou collègue qui a répondu très vite.",
+      "exampleUsage": "J'ai bien reçu les maquettes corrigées. Je te remercie chaleureusement pour ta réactivité sur ce dossier.",
+      "category": "BUREAU",
+      "level": "DEBUTANT",
+      "keywords": ["remerciement", "réactivité", "collaboration"]
+    },
+    {
+      "id": "exp_03",
+      "lessonId": "les_salutations_bureau",
+      "frenchText": "Pourrais-tu préciser ta pensée ? Je ne suis pas certain de bien saisir.",
+      "explanation": "Demande de clarification polie sans sous-entendre que l'autre s'est mal exprimé.",
+      "exampleUsage": "Sur la partie migration de données, pourrais-tu préciser ta pensée ? Je ne suis pas certain de bien saisir.",
+      "category": "BUREAU",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["clarification", "compréhension", "reformulation"]
+    },
+    {
+      "id": "exp_04",
+      "lessonId": "les_salutations_bureau",
+      "frenchText": "Navré pour ce contretemps, nous mettons tout en œuvre pour rétablir la situation.",
+      "explanation": "Excuses professionnelles orientées immédiatement vers la prise en charge du problème.",
+      "exampleUsage": "Navré pour ce contretemps sur le serveur de pré-production, nous mettons tout en œuvre pour rétablir la situation.",
+      "category": "BUREAU",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["excuses", "contretemps", "prise en charge"]
+    },
+    {
+      "id": "exp_05",
+      "lessonId": "les_vocabulaire_projet",
+      "frenchText": "Nous devons faire un arbitrage rapide pour ne pas décaler le jalon de livraison.",
+      "explanation": "Faire un arbitrage signifie trancher entre deux options concurrentes pour préserver l'objectif.",
+      "exampleUsage": "Face aux retards de validation, nous devons faire un arbitrage rapide pour ne pas décaler le jalon de livraison.",
+      "category": "TECHNIQUE",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["arbitrage", "jalon", "livraison", "projet"]
+    },
+    {
+      "id": "exp_06",
+      "lessonId": "les_vocabulaire_projet",
+      "frenchText": "Ce livrable est bloquant pour la suite des développements.",
+      "explanation": "Indique une dépendance critique : sans cet élément, l'équipe ne peut plus progresser.",
+      "exampleUsage": "La validation des maquettes Figma par le client est bloquante pour la suite des développements.",
+      "category": "TECHNIQUE",
+      "level": "DEBUTANT",
+      "keywords": ["bloquant", "dépendance", "livrable", "développement"]
+    },
+    {
+      "id": "exp_07",
+      "lessonId": "les_vocabulaire_projet",
+      "frenchText": "Pouvons-nous définir ensemble les critères d'acceptation du ticket ?",
+      "explanation": "Définit les conditions mesurables pour considérer qu'une fonctionnalité est terminée et conforme.",
+      "exampleUsage": "Avant de lancer le sprint, pouvons-nous définir ensemble les critères d'acceptation du ticket d'authentification ?",
+      "category": "TECHNIQUE",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["critères d'acceptation", "sprint", "agilité", "qualité"]
+    },
+    {
+      "id": "exp_08",
+      "lessonId": "les_vocabulaire_projet",
+      "frenchText": "Nous constatons un glissement de calendrier dû à des imprévus techniques.",
+      "explanation": "Expression diplomatique pour signaler un retard sans accuser directement une personne.",
+      "exampleUsage": "Au niveau du lot 2, nous constatons un glissement de calendrier de trois jours dû à des imprévus techniques.",
+      "category": "TECHNIQUE",
+      "level": "AVANCE",
+      "keywords": ["glissement", "calendrier", "délai", "imprévu"]
+    },
+    {
+      "id": "exp_09",
+      "lessonId": "les_vocabulaire_projet",
+      "frenchText": "Il est préférable d'adresser cette dette technique avant la mise en production.",
+      "explanation": "La dette technique désigne les compromis de code qui risquent de ralentir le projet plus tard.",
+      "exampleUsage": "Pour garantir la pérennité du système, il est préférable d'adresser cette dette technique avant la mise en production.",
+      "category": "TECHNIQUE",
+      "level": "AVANCE",
+      "keywords": ["dette technique", "mise en production", "qualité", "code"]
+    },
+    {
+      "id": "exp_10",
+      "lessonId": "les_emails_pros",
+      "frenchText": "Je me permets de revenir vers vous concernant notre échange téléphonique.",
+      "explanation": "Formulation courtoise idéale pour débuter un email de suivi ou de relance.",
+      "exampleUsage": "Bonjour Madame Mercier, je me permets de revenir vers vous concernant notre échange téléphonique de ce matin.",
+      "category": "EMAIL",
+      "level": "DEBUTANT",
+      "keywords": ["revenir vers", "suivi", "email", "relance"]
+    },
+    {
+      "id": "exp_11",
+      "lessonId": "les_emails_pros",
+      "frenchText": "Veuillez trouver ci-joint le compte rendu d'activité pour validation.",
+      "explanation": "Formule formelle et soignée pour transmettre une pièce jointe importante.",
+      "exampleUsage": "Veuillez trouver ci-joint le compte rendu d'activité du mois d'octobre pour validation de votre part.",
+      "category": "EMAIL",
+      "level": "DEBUTANT",
+      "keywords": ["ci-joint", "compte rendu", "validation", "email"]
+    },
+    {
+      "id": "exp_12",
+      "lessonId": "les_emails_pros",
+      "frenchText": "Sans retour de votre part d'ici jeudi, nous reconduirons le paramétrage par défaut.",
+      "explanation": "Fixe une échéance claire et constructive sans paraître agressif.",
+      "exampleUsage": "Afin de ne pas bloquer le déploiement, sans retour de votre part d'ici jeudi, nous reconduirons le paramétrage par défaut.",
+      "category": "EMAIL",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["échéance", "délai", "retour", "relance"]
+    },
+    {
+      "id": "exp_13",
+      "lessonId": "les_emails_pros",
+      "frenchText": "Je reste à votre entière disposition pour tout complément d'information.",
+      "explanation": "Conclusion d'email très professionnelle et serviable avant la salutation finale.",
+      "exampleUsage": "En espérant que cette synthèse réponde à vos attentes, je reste à votre entière disposition pour tout complément d'information.",
+      "category": "EMAIL",
+      "level": "DEBUTANT",
+      "keywords": ["disposition", "complément", "conclusion", "politesse"]
+    },
+    {
+      "id": "exp_14",
+      "lessonId": "les_emails_pros",
+      "frenchText": "Pourriez-vous m'accuser bonne réception de ce document ?",
+      "explanation": "Demande polie pour confirmer qu'un fichier ou contrat a bien été reçu.",
+      "exampleUsage": "Voici la dernière version du protocole d'accord. Pourriez-vous m'accuser bonne réception de ce document ?",
+      "category": "EMAIL",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["accuser réception", "confirmation", "pièce jointe"]
+    },
+    {
+      "id": "exp_15",
+      "lessonId": "les_ouvrir_reunion",
+      "frenchText": "Je vous propose que nous fassions un rapide tour de table avant d'entamer l'ordre du jour.",
+      "explanation": "Invitation collaborative pour lancer la réunion et permettre à chacun de s'exprimer.",
+      "exampleUsage": "Bienvenue à tous. Je vous propose que nous fassions un rapide tour de table avant d'entamer l'ordre du jour.",
+      "category": "REUNION",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["tour de table", "démarrage", "ordre du jour"]
+    },
+    {
+      "id": "exp_16",
+      "lessonId": "les_ouvrir_reunion",
+      "frenchText": "L'objectif principal de ce point est d'aligner nos priorités pour le prochain trimestre.",
+      "explanation": "Clarifie dès la première minute la finalité opérationnelle de la rencontre.",
+      "exampleUsage": "L'objectif principal de ce point est d'aligner nos priorités pour le prochain trimestre et d'identifier les ressources manquantes.",
+      "category": "REUNION",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["objectif", "alignement", "priorités", "cadrage"]
+    },
+    {
+      "id": "exp_17",
+      "lessonId": "les_ouvrir_reunion",
+      "frenchText": "Nous avons convenu de 45 minutes, je serai garant du respect du timing.",
+      "explanation": "Rassure les participants sur l'efficacité et la ponctualité de la réunion.",
+      "exampleUsage": "Merci d'être ponctuels. Nous avons convenu de 45 minutes, je serai garant du respect du timing pour que chacun puisse enchaîner.",
+      "category": "REUNION",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["timing", "durée", "animation", "ponctualité"]
+    },
+    {
+      "id": "exp_18",
+      "lessonId": "les_ouvrir_reunion",
+      "frenchText": "Si personne n'y voit d'inconvénient, je propose d'enregistrer la séance pour les absents.",
+      "explanation": "Demande de consentement courtoise et professionnelle pour l'enregistrement visio.",
+      "exampleUsage": "Puisque plusieurs collègues sont en déplacement, si personne n'y voit d'inconvénient, je propose d'enregistrer la séance pour les absents.",
+      "category": "REUNION",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["enregistrement", "visio", "consentement"]
+    },
+    {
+      "id": "exp_19",
+      "lessonId": "les_intervenir_reunion",
+      "frenchText": "Je partage entièrement cette approche, cela nous permettra de sécuriser les jalons.",
+      "explanation": "Exprimer une adhésion franche et argumentée à l'idée d'un collègue.",
+      "exampleUsage": "Je partage entièrement cette approche sur l'automatisation des tests, cela nous permettra de sécuriser les jalons.",
+      "category": "REUNION",
+      "level": "DEBUTANT",
+      "keywords": ["accord", "approbation", "adhésion", "sécurisation"]
+    },
+    {
+      "id": "exp_20",
+      "lessonId": "les_intervenir_reunion",
+      "frenchText": "Je rejoins votre point de vue sur le principe, mais nous devons mesurer l'impact budgétaire.",
+      "explanation": "Formule diplomatique classique pour objecter sans braquer son interlocuteur.",
+      "exampleUsage": "Je rejoins votre point de vue sur le principe, mais nous devons mesurer l'impact budgétaire avant de contractualiser.",
+      "category": "REUNION",
+      "level": "AVANCE",
+      "keywords": ["objection", "nuance", "budget", "diplomatie"]
+    },
+    {
+      "id": "exp_21",
+      "lessonId": "les_intervenir_reunion",
+      "frenchText": "Puis-je me permettre une précision à ce stade de la discussion ?",
+      "explanation": "Manière très polie de demander la parole sans couper brusquement la personne.",
+      "exampleUsage": "Puis-je me permettre une précision à ce stade de la discussion concernant l'architecture réseau ?",
+      "category": "REUNION",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["prise de parole", "politesse", "interruption"]
+    },
+    {
+      "id": "exp_22",
+      "lessonId": "les_intervenir_reunion",
+      "frenchText": "Pour éviter de nous disperser, je propose de traiter ce point connexe en aparté.",
+      "explanation": "Recadre les débats hors sujet pour respecter l'ordre du jour initial.",
+      "exampleUsage": "C'est une excellente remarque, mais pour éviter de nous disperser, je propose de traiter ce point connexe en aparté après la réunion.",
+      "category": "REUNION",
+      "level": "AVANCE",
+      "keywords": ["recadrage", "aparté", "ordre du jour", "efficacité"]
+    },
+    {
+      "id": "exp_23",
+      "lessonId": "les_accueil_client",
+      "frenchText": "Ravi de vous rencontrer. Comment puis-je vous accompagner dans votre démarche ?",
+      "explanation": "Accueil chaleureux, professionnel et centré sur le service apporté au client.",
+      "exampleUsage": "Bonjour Monsieur Laroche, ravi de vous rencontrer. Comment puis-je vous accompagner dans votre démarche aujourd'hui ?",
+      "category": "CLIENT",
+      "level": "DEBUTANT",
+      "keywords": ["accueil", "écoute", "accompagnement", "client"]
+    },
+    {
+      "id": "exp_24",
+      "lessonId": "les_accueil_client",
+      "frenchText": "Pour être certain de bien cerner vos attentes, quels sont vos critères déterminants ?",
+      "explanation": "Question ouverte d'écoute active pour explorer les besoins stratégiques.",
+      "exampleUsage": "Pour être certain de bien cerner vos attentes, quels sont vos critères déterminants en termes d'évolutivité et de support ?",
+      "category": "CLIENT",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["attentes", "critères", "qualification", "écoute active"]
+    },
+    {
+      "id": "exp_25",
+      "lessonId": "les_accueil_client",
+      "frenchText": "Si je résume votre besoin, vous recherchez avant tout une solution clé en main.",
+      "explanation": "Technique de reformulation pour valider la bonne compréhension et instaurer la confiance.",
+      "exampleUsage": "Si je résume votre besoin, vous recherchez avant tout une solution clé en main capable de s'intégrer à votre SI actuel.",
+      "category": "CLIENT",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["reformulation", "clé en main", "validation", "client"]
+    },
+    {
+      "id": "exp_26",
+      "lessonId": "les_accueil_client",
+      "frenchText": "Cette solution a fait ses preuves auprès d'acteurs ayant des volumétries similaires.",
+      "explanation": "Argument de réassurance par la preuve sociale et l'expérience terrain.",
+      "exampleUsage": "Vous pouvez avoir l'esprit tranquille : cette solution a fait ses preuves auprès d'acteurs ayant des volumétries similaires.",
+      "category": "CLIENT",
+      "level": "AVANCE",
+      "keywords": ["réassurance", "expérience", "preuve", "crédibilité"]
+    },
+    {
+      "id": "exp_27",
+      "lessonId": "les_reclamation_client",
+      "frenchText": "Nous comprenons parfaitement votre agacement et nous prenons votre demande très au sérieux.",
+      "explanation": "Posture d'empathie sincère indispensable pour calmer l'irritation d'un client insatisfait.",
+      "exampleUsage": "Nous comprenons parfaitement votre agacement suite à cette interruption de service et nous prenons votre demande très au sérieux.",
+      "category": "CLIENT",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["réclamation", "empathie", "écoute", "gestion de crise"]
+    },
+    {
+      "id": "exp_28",
+      "lessonId": "les_reclamation_client",
+      "frenchText": "Voici le plan d'action immédiat que nous mettons en place pour résoudre cette anomalie.",
+      "explanation": "Bascule immédiatement de la plainte vers une solution concrète et opérationnelle.",
+      "exampleUsage": "Sans attendre, voici le plan d'action immédiat que nous mettons en place pour résoudre cette anomalie d'affichage.",
+      "category": "CLIENT",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["plan d'action", "résolution", "anomalie", "support"]
+    },
+    {
+      "id": "exp_29",
+      "lessonId": "les_reclamation_client",
+      "frenchText": "À titre de geste commercial, nous vous proposons d'intégrer ce module sans surcoût.",
+      "explanation": "Proposition de compensation financière ou fonctionnelle pour fidéliser le client.",
+      "exampleUsage": "Pour compenser le délai de livraison, à titre de geste commercial, nous vous proposons d'intégrer ce module sans surcoût.",
+      "category": "CLIENT",
+      "level": "AVANCE",
+      "keywords": ["geste commercial", "compensation", "fidélisation", "négociation"]
+    },
+    {
+      "id": "exp_30",
+      "lessonId": "les_reclamation_client",
+      "frenchText": "Pouvons-nous convenir d'un rendez-vous vendredi pour faire le bilan de ces ajustements ?",
+      "explanation": "Verrouille un suivi qualité pour prouver au client son importance sur la durée.",
+      "exampleUsage": "Pouvons-nous convenir d'un rendez-vous vendredi pour faire le bilan de ces ajustements et vérifier que tout fonctionne à 100% ?",
+      "category": "CLIENT",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["suivi", "rendez-vous", "bilan", "satisfaction"]
+    },
+    {
+      "id": "exp_31",
+      "lessonId": "les_appels_pros",
+      "frenchText": "Pourriez-vous me mettre en relation avec la personne en charge du projet ?",
+      "explanation": "Demande standard au standard téléphonique pour atteindre le bon interlocuteur.",
+      "exampleUsage": "Bonjour, je suis Thomas de la société Novatech. Pourriez-vous me mettre en relation avec la personne en charge du projet ?",
+      "category": "APPEL",
+      "level": "DEBUTANT",
+      "keywords": ["mise en relation", "standard", "appel", "projet"]
+    },
+    {
+      "id": "exp_32",
+      "lessonId": "les_appels_pros",
+      "frenchText": "La ligne est occupée pour le moment, préférez-vous patienter ou laisser un message ?",
+      "explanation": "Accueil téléphonique courtois proposant des options claires au correspondant.",
+      "exampleUsage": "Madame Laurent est en ligne pour le moment, préférez-vous patienter ou lui laisser un message sur sa boîte vocale ?",
+      "category": "APPEL",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["patienter", "message", "ligne occupée", "téléphone"]
+    },
+    {
+      "id": "exp_33",
+      "lessonId": "les_appels_pros",
+      "frenchText": "Je vous entends très mal, pourriez-vous désactiver votre haut-parleur ?",
+      "explanation": "Gestion diplomate d'un problème technique d'audio sans vexer l'appelant.",
+      "exampleUsage": "Excusez-moi, il y a un écho important sur la ligne. Je vous entends très mal, pourriez-vous désactiver votre haut-parleur ?",
+      "category": "APPEL",
+      "level": "DEBUTANT",
+      "keywords": ["visio", "audio", "écho", "technique"]
+    },
+    {
+      "id": "exp_34",
+      "lessonId": "les_appels_pros",
+      "frenchText": "C'est bien noté. Je lui transmets votre message dès la fin de sa réunion.",
+      "explanation": "Prise de message professionnelle avec engagement de restitution rapide.",
+      "exampleUsage": "C'est bien noté, monsieur Bernard. Je lui transmets votre message dès la fin de sa réunion à 15 heures.",
+      "category": "APPEL",
+      "level": "DEBUTANT",
+      "keywords": ["prise de message", "engagement", "transmission"]
+    },
+    {
+      "id": "exp_35",
+      "lessonId": "les_salutations_bureau",
+      "frenchText": "Je te tiens informé dès que j'ai du nouveau de la part de la direction.",
+      "explanation": "Promesse de suivi régulier et transparent envers son équipe.",
+      "exampleUsage": "Ne t'inquiète pas, je te tiens informé dès que j'ai du nouveau de la part de la direction concernant le budget.",
+      "category": "BUREAU",
+      "level": "DEBUTANT",
+      "keywords": ["information", "suivi", "mise à jour"]
+    },
+    {
+      "id": "exp_36",
+      "lessonId": "les_emails_pros",
+      "frenchText": "En réponse à votre sollicitation, voici un récapitulatif détaillé de nos engagements.",
+      "explanation": "Idéal pour entamer un devis ou une proposition d'accompagnement par écrit.",
+      "exampleUsage": "Bonjour Monsieur, en réponse à votre sollicitation, voici un récapitulatif détaillé de nos engagements et délais de réalisation.",
+      "category": "EMAIL",
+      "level": "INTERMEDIAIRE",
+      "keywords": ["sollicitation", "engagements", "devis", "prospect"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_01",
+      "lessonId": "les_ouvrir_reunion",
+      "type": "MCQ",
+      "questionOrPrompt": "Quelle formule est la plus professionnelle pour cadrer le timing d'une réunion dès le début ?",
+      "options": [
+        "On a 30 minutes et après je m'en vais.",
+        "Nous avons convenu de 45 minutes, je serai garant du respect du timing.",
+        "Arrêtez de parler quand l'alarme sonnera.",
+        "Dépêchons-nous sinon on n'aura jamais le temps."
+      ],
+      "correctAnswer": "Nous avons convenu de 45 minutes, je serai garant du respect du timing.",
+      "explanation": "Cette formulation affirme un leadership rassurant, structuré et bienveillant."
+    },
+    {
+      "id": "ex_02",
+      "lessonId": "les_intervenir_reunion",
+      "type": "MCQ",
+      "questionOrPrompt": "Comment formuler poliment une objection sur une idée en réunion sans froisser son collègue ?",
+      "options": [
+        "Votre idée n'a aucun sens économique.",
+        "Je rejoins votre point de vue sur le principe, mais nous devons mesurer l'impact budgétaire.",
+        "C'est hors de question, le budget ne le permet pas.",
+        "Vous devriez revoir complètement vos calculs."
+      ],
+      "correctAnswer": "Je rejoins votre point de vue sur le principe, mais nous devons mesurer l'impact budgétaire.",
+      "explanation": "La formule valide d'abord l'intention positive (principe) avant de poser la réserve pratique (budget)."
+    },
+    {
+      "id": "ex_03",
+      "lessonId": "les_accueil_client",
+      "type": "MCQ",
+      "questionOrPrompt": "Quelle question ouverte permet de qualifier précisément les attentes d'un nouveau client ?",
+      "options": [
+        "Vous signez aujourd'hui ou demain ?",
+        "Pour être certain de bien cerner vos attentes, quels sont vos critères déterminants ?",
+        "Vous avez assez d'argent pour ce projet ?",
+        "Quel est votre avis sur nos concurrents ?"
+      ],
+      "correctAnswer": "Pour être certain de bien cerner vos attentes, quels sont vos critères déterminants ?",
+      "explanation": "Une question ouverte d'écoute active permet au client d'exprimer librement ses priorités."
+    },
+    {
+      "id": "ex_04",
+      "lessonId": "les_reclamation_client",
+      "type": "MCQ",
+      "questionOrPrompt": "Face à un client très mécontent d'un bug, quelle doit être votre première réaction ?",
+      "options": [
+        "Lui dire que ce n'est pas de votre faute mais de celle des serveurs.",
+        "Nous comprenons parfaitement votre agacement et nous prenons votre demande très au sérieux.",
+        "Lui demander de rappeler plus tard quand il sera calmé.",
+        "Contester ses remarques point par point."
+      ],
+      "correctAnswer": "Nous comprenons parfaitement votre agacement et nous prenons votre demande très au sérieux.",
+      "explanation": "La reconnaissance empathique est le prérequis indispensable avant de proposer toute solution technique."
+    },
+    {
+      "id": "ex_05",
+      "lessonId": "les_emails_pros",
+      "type": "MCQ",
+      "questionOrPrompt": "Quelle phrase est la plus adaptée pour conclure un email professionnel à un prospect ?",
+      "options": [
+        "Répondez-moi vite.",
+        "Je reste à votre entière disposition pour tout complément d'information.",
+        "À plus tard dans la journée.",
+        "J'attends votre virement."
+      ],
+      "correctAnswer": "Je reste à votre entière disposition pour tout complément d'information.",
+      "explanation": "C'est la conclusion de référence pour manifester disponibilité et courtoisie."
+    },
+    {
+      "id": "ex_06",
+      "lessonId": "les_vocabulaire_projet",
+      "type": "MCQ",
+      "questionOrPrompt": "Que signifie l'expression 'dette technique' dans un contexte de développement ou de projet IT ?",
+      "options": [
+        "Une facture impayée auprès d'un fournisseur cloud.",
+        "Le coût cumulé des raccourcis de conception ou de code qu'il faudra corriger plus tard.",
+        "Le salaire des développeurs en heures supplémentaires.",
+        "Le matériel informatique défectueux à remplacer."
+      ],
+      "correctAnswer": "Le coût cumulé des raccourcis de conception ou de code qu'il faudra corriger plus tard.",
+      "explanation": "La dette technique désigne les compromis de qualité qui risquent d'alourdir la maintenance future."
+    },
+    {
+      "id": "ex_07",
+      "lessonId": "les_appels_pros",
+      "type": "MCQ",
+      "questionOrPrompt": "Que dites-vous pour faire patienter poliment un client au téléphone pendant que vous cherchez son dossier ?",
+      "options": [
+        "Attendez là, je cherche.",
+        "Je consulte votre dossier informatique, je vous invite à patienter quelques instants.",
+        "Ne coupez pas, c'est très long aujourd'hui.",
+        "Rappelez dans une heure, mon logiciel plante."
+      ],
+      "correctAnswer": "Je consulte votre dossier informatique, je vous invite à patienter quelques instants.",
+      "explanation": "Cette formulation allie transparence, courtoisie et maîtrise de la situation."
+    },
+    {
+      "id": "ex_08",
+      "lessonId": "les_vocabulaire_projet",
+      "type": "FILL_BLANKS",
+      "questionOrPrompt": "Nous devons faire un ___ rapide pour ne pas décaler le jalon de livraison.",
+      "options": ["arbitrage", "reproche", "oubli", "retard"],
+      "correctAnswer": "arbitrage",
+      "explanation": "L'arbitrage est la décision hiérarchique ou technique qui tranche entre plusieurs priorités."
+    },
+    {
+      "id": "ex_09",
+      "lessonId": "les_emails_pros",
+      "type": "FILL_BLANKS",
+      "questionOrPrompt": "Je me permets de ___ vers vous concernant notre échange téléphonique de ce matin.",
+      "options": ["revenir", "plaindre", "courir", "douter"],
+      "correctAnswer": "revenir",
+      "explanation": "L'expression 'revenir vers vous' est la formule consacrée pour recontacter un interlocuteur."
+    },
+    {
+      "id": "ex_10",
+      "lessonId": "les_reclamation_client",
+      "type": "FILL_BLANKS",
+      "questionOrPrompt": "À titre de geste ___, nous vous proposons d'intégrer cette fonctionnalité sans surcoût.",
+      "options": ["commercial", "gratuit", "amical", "secret"],
+      "correctAnswer": "commercial",
+      "explanation": "Un 'geste commercial' est une concession consentie à un client pour fidéliser la relation."
+    },
+    {
+      "id": "ex_11",
+      "lessonId": "les_ouvrir_reunion",
+      "type": "FILL_BLANKS",
+      "questionOrPrompt": "Je vous propose que nous fassions un rapide tour de ___ avant d'aborder l'ordre du jour.",
+      "options": ["table", "bureau", "ville", "carte"],
+      "correctAnswer": "table",
+      "explanation": "Un 'tour de table' désigne l'expression successive de chacun des participants en début de réunion."
+    },
+    {
+      "id": "ex_12",
+      "lessonId": "les_salutations_bureau",
+      "type": "FILL_BLANKS",
+      "questionOrPrompt": "Pourrais-tu préciser ta ___ ? Je ne suis pas certain de bien saisir les enjeux.",
+      "options": ["pensée", "colère", "force", "famille"],
+      "correctAnswer": "pensée",
+      "explanation": "'Préciser sa pensée' est une tournure polie pour demander plus de détails sans juger."
+    },
+    {
+      "id": "ex_13",
+      "lessonId": "les_accueil_client",
+      "type": "FILL_BLANKS",
+      "questionOrPrompt": "Si je résume votre besoin, vous recherchez une solution clé en ___.",
+      "options": ["main", "or", "poche", "tête"],
+      "correctAnswer": "main",
+      "explanation": "Une solution 'clé en main' désigne une solution immédiatement opérationnelle et complète."
+    },
+    {
+      "id": "ex_14",
+      "lessonId": "les_appels_pros",
+      "type": "FILL_BLANKS",
+      "questionOrPrompt": "Madame Martin est occupée, préférez-vous ___ ou lui laisser un message ?",
+      "options": ["patienter", "raccrocher", "crier", "partir"],
+      "correctAnswer": "patienter",
+      "explanation": "'Patienter' est le verbe adéquat pour inviter courtoisement un correspondant à attendre en ligne."
+    }
+  ],
+  "dialogues": [
+    {
+      "id": "dial_reunion_arbitrage",
+      "title": "Point d'arbitrage de sprint en réunion",
+      "situationContext": "Réunion hebdomadaire entre un chef de projet (Sarah) et le Lead Développeur (Julien) sur les arbitrages de calendrier.",
+      "lines": [
+        {
+          "speaker": "Sarah",
+          "role": "Chef de projet",
+          "frenchText": "Bonjour à tous. À l'ordre du jour aujourd'hui : la revue de l'avancement et les risques sur la date de déploiement.",
+          "notes": "Ouverture formelle et claire des débats."
+        },
+        {
+          "speaker": "Julien",
+          "role": "Lead Développeur",
+          "frenchText": "Pour tenir le délai initial sans accumuler de dette technique, il faudrait reporter l'export avancé au sprint suivant.",
+          "notes": "Proposition d'arbitrage pragmatique basée sur la qualité."
+        },
+        {
+          "speaker": "Sarah",
+          "role": "Chef de projet",
+          "frenchText": "Je rejoins votre analyse sur le fond, mais le client attend impérativement cette fonctionnalité pour la fin du mois.",
+          "notes": "Objection diplomatique rappelant l'engagement commercial."
+        },
+        {
+          "speaker": "Julien",
+          "role": "Lead Développeur",
+          "frenchText": "Dans ce cas, nous pourrions livrer une première version simplifiée et enrichir les filtres dans un second temps.",
+          "notes": "Compromis intelligent ('MVP' ou lotissement)."
+        },
+        {
+          "speaker": "Sarah",
+          "role": "Chef de projet",
+          "frenchText": "C'est un excellent compromis. Je valide cette option et j'en informe le client dans le compte rendu de cet après-midi.",
+          "notes": "Décision actée et engagement de traçabilité écrite."
+        }
+      ]
+    },
+    {
+      "id": "dial_relation_client",
+      "title": "Gestion d'une demande et réassurance client",
+      "situationContext": "Échange entre une consultante senior (Camille) et un directeur client (Monsieur Vasseur) suite à une réclamation sur un délai.",
+      "lines": [
+        {
+          "speaker": "M. Vasseur",
+          "role": "Directeur Client",
+          "frenchText": "Bonjour Camille. Nous constatons un retard sur la livraison du module de facturation, ce qui perturbe nos équipes comptables.",
+          "notes": "Exposé mesuré mais ferme d'une insatisfaction."
+        },
+        {
+          "speaker": "Camille",
+          "role": "Consultante Senior",
+          "frenchText": "Bonjour Monsieur Vasseur. Nous comprenons parfaitement votre agacement et nous prenons cette situation très au sérieux.",
+          "notes": "Empathie immédiate, sans déni ni esquive."
+        },
+        {
+          "speaker": "Camille",
+          "role": "Consultante Senior",
+          "frenchText": "Voici notre plan d'action : nous déployons un correctif sur votre environnement de test d'ici 14 heures pour une validation conjointe.",
+          "notes": "Prise en main opérationnelle avec engagement d'heure précis."
+        },
+        {
+          "speaker": "M. Vasseur",
+          "role": "Directeur Client",
+          "frenchText": "C'est rassurant. Pouvons-nous prévoir une formation express pour mes collaborateurs vendredi matin ?",
+          "notes": "Demande de consolidation de la solution."
+        },
+        {
+          "speaker": "Camille",
+          "role": "Consultante Senior",
+          "frenchText": "Tout à fait. À titre de geste commercial, nous assurerons cette session d'une heure sans facturation additionnelle.",
+          "notes": "Fidélisation par un geste commercial opportun."
+        },
+        {
+          "speaker": "M. Vasseur",
+          "role": "Directeur Client",
+          "frenchText": "Je vous remercie pour votre réactivité et votre professionnalisme. Rendez-vous vendredi.",
+          "notes": "Clôture positive et confiance rétablie."
+        }
+      ]
+    }
+  ]
+}
