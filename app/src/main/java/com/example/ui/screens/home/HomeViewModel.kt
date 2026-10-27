@@ -37,11 +37,11 @@ class HomeViewModel(
     val uiState: StateFlow<HomeUiState> = combine(
         userDataRepository.getCompletedLessonIds(),
         userDataRepository.getAllFavoriteIds(),
-        userDataRepository.getAllReviews(),
+        userDataRepository.getAllSrsCards(),
         userDataRepository.getAllQuizScores()
-    ) { completedLessons, favoriteIds, reviews, quizScores ->
+    ) { completedLessons, favoriteIds, srsCards, quizScores ->
         val allLessons = pedagogyRepository.getPedagogyData().lessons
-        val mastered = reviews.count { it.masteryLevel >= 2 }
+        val mastered = srsCards.count { it.repetitions >= 2 || it.lastQualityGrade >= 2 }
 
         val accuracy = if (quizScores.isNotEmpty()) {
             val totalScore = quizScores.sumOf { it.score }

@@ -35,4 +35,12 @@ sealed class Screen(val route: String) {
     data object Search : Screen("search")
     data object Progress : Screen("progress")
     data object Settings : Screen("settings")
+
+    // Nouvelles routes V2
+    data object Simulation : Screen("simulation?scenarioId={scenarioId}") {
+        fun createRoute(scenarioId: String? = null) =
+            if (scenarioId != null) "simulation?scenarioId=$scenarioId" else "simulation"
+    }
+    data object EmailBuilder : Screen("email_builder")
+    data object CompetencyRadar : Screen("competency_radar")
 }

@@ -1,30 +1,39 @@
 {
+  "supportedLanguages": ["fr", "en"],
   "modules": [
     {
       "id": "mod_bureau_projet",
       "title": "Vie de bureau & Gestion de projet",
+      "titleEn": "Office Life & Project Management",
       "description": "Communication quotidienne, coordination d'équipe, planification agile, jalons et gestion des imprévus.",
+      "descriptionEn": "Daily communication, team coordination, agile planning, milestones and issue management.",
       "iconName": "work",
       "level": "Débutant / Intermédiaire"
     },
     {
       "id": "mod_reunions",
       "title": "Réunions & Prise de parole",
+      "titleEn": "Meetings & Public Speaking",
       "description": "Ouvrir une séance, cadrer le timing, donner son avis, objecter avec diplomatie et rédiger la synthèse.",
+      "descriptionEn": "Opening a meeting, timekeeping, expressing opinions, diplomatic objections and summarizing.",
       "iconName": "groups",
       "level": "Intermédiaire"
     },
     {
       "id": "mod_client",
       "title": "Relation Client & Négociation",
+      "titleEn": "Client Relations & Negotiation",
       "description": "Accueillir un client, cerner son besoin, argumenter avec conviction, gérer les réclamations et conclure.",
+      "descriptionEn": "Welcoming clients, scoping needs, pitching solutions, handling claims and closing deals.",
       "iconName": "handshake",
       "level": "Intermédiaire / Avancé"
     },
     {
       "id": "mod_ecrits_appels",
       "title": "Écrits professionnels & Appels",
-      "description": "Emails percutants, comptes rendus, messages instantanés Slack/Teams et gestion des appels téléphoniques.",
+      "titleEn": "Business Writing & Phone Calls",
+      "description": "Emails percutants, comptes rendus, messages instantanés et gestion des appels téléphoniques.",
+      "descriptionEn": "Impactful emails, meeting minutes, instant messages and professional phone handling.",
       "iconName": "mail",
       "level": "Débutant / Intermédiaire"
     }
@@ -34,56 +43,72 @@
       "id": "les_salutations_bureau",
       "moduleId": "mod_bureau_projet",
       "title": "Salutations et échanges quotidiens au bureau",
+      "titleEn": "Greetings and Daily Office Interactions",
       "contextSummary": "Prendre contact avec bienveillance, demander de l'aide, remercier et clarifier un message.",
+      "contextSummaryEn": "Reaching out politely, asking for assistance, thanking colleagues and clarifying.",
       "order": 1
     },
     {
       "id": "les_vocabulaire_projet",
       "moduleId": "mod_bureau_projet",
       "title": "Vocabulaire de projet : délais, jalons et arbitrages",
+      "titleEn": "Project Vocabulary: Deadlines, Milestones & Trade-offs",
       "contextSummary": "Discuter des plannings, prioriser les tâches, identifier les risques et livrer dans les temps.",
+      "contextSummaryEn": "Discussing timelines, prioritizing tasks, assessing risks and on-time delivery.",
       "order": 2
     },
     {
       "id": "les_emails_pros",
       "moduleId": "mod_ecrits_appels",
       "title": "Emails et messages professionnels percutants",
+      "titleEn": "High-Impact Business Emails & Messages",
       "contextSummary": "Rédiger des objets percutants, structurer ses demandes et relancer sans froisser.",
+      "contextSummaryEn": "Writing compelling subjects, structuring requests, and following up smoothly.",
       "order": 1
     },
     {
       "id": "les_appels_pros",
       "moduleId": "mod_ecrits_appels",
       "title": "Gestion des appels téléphoniques et visios",
-      "contextSummary": "Prendre un appel, faire patienter, transférer un interlocuteur et laisser un message vocal clair.",
+      "titleEn": "Professional Phone & Video Calls",
+      "contextSummary": "Prendre un appel, faire patienter, transférer un interlocuteur et laisser un message clair.",
+      "contextSummaryEn": "Answering calls, putting on hold, transferring calls and leaving clear voice messages.",
       "order": 2
     },
     {
       "id": "les_ouvrir_reunion",
       "moduleId": "mod_reunions",
       "title": "Ouvrir une réunion et poser le cadre",
+      "titleEn": "Opening Meetings & Setting the Agenda",
       "contextSummary": "Accueillir les participants, présenter l'ordre du jour et définir le temps imparti.",
+      "contextSummaryEn": "Welcoming attendees, setting the agenda, and defining the allocated time.",
       "order": 1
     },
     {
       "id": "les_intervenir_reunion",
       "moduleId": "mod_reunions",
       "title": "Prendre la parole et objecter avec diplomatie",
+      "titleEn": "Speaking Up & Diplomatic Objections",
       "contextSummary": "Interrompre poliment, marquer son accord ou formuler une réserve constructive.",
+      "contextSummaryEn": "Politely interrupting, agreeing, or formulating constructive caveats.",
       "order": 2
     },
     {
       "id": "les_accueil_client",
       "moduleId": "mod_client",
       "title": "Accueillir un client et qualifier son besoin",
+      "titleEn": "Welcoming Clients & Scoping Needs",
       "contextSummary": "Instaurer un climat de confiance, pratiquer l'écoute active et reformuler la demande.",
+      "contextSummaryEn": "Building trust, practicing active listening, and restating customer expectations.",
       "order": 1
     },
     {
       "id": "les_reclamation_client",
       "moduleId": "mod_client",
       "title": "Gérer une réclamation et négocier un accord",
+      "titleEn": "Handling Complaints & Negotiating Agreements",
       "contextSummary": "Désamorcer les tensions, proposer des solutions pérennes et clore un litige de façon positive.",
+      "contextSummaryEn": "De-escalating conflicts, proposing lasting solutions, and closing issues positively.",
       "order": 2
     }
   ],
@@ -92,7 +117,9 @@
       "id": "exp_01",
       "lessonId": "les_salutations_bureau",
       "frenchText": "Aurais-tu un instant pour qu'on fasse un point rapide ?",
+      "englishTranslation": "Would you have a moment for a quick catch-up?",
       "explanation": "Façon courtoise et non intrusive de solliciter l'attention d'un collègue sur un sujet précis.",
+      "explanationEn": "Polite and non-intrusive way to ask for a colleague's attention on a specific topic.",
       "exampleUsage": "Bonjour Thomas, aurais-tu un instant pour qu'on fasse un point rapide sur le dossier Dupont ?",
       "category": "BUREAU",
       "level": "DEBUTANT",
@@ -102,7 +129,9 @@
       "id": "exp_02",
       "lessonId": "les_salutations_bureau",
       "frenchText": "Je te remercie chaleureusement pour ta réactivité sur ce dossier.",
+      "englishTranslation": "Thank you very much for your quick turnaround on this file.",
       "explanation": "Formule valorisante pour remercier un partenaire ou collègue qui a répondu très vite.",
+      "explanationEn": "Appreciative phrase to thank a peer or partner who replied promptly.",
       "exampleUsage": "J'ai bien reçu les maquettes corrigées. Je te remercie chaleureusement pour ta réactivité sur ce dossier.",
       "category": "BUREAU",
       "level": "DEBUTANT",
@@ -112,7 +141,9 @@
       "id": "exp_03",
       "lessonId": "les_salutations_bureau",
       "frenchText": "Pourrais-tu préciser ta pensée ? Je ne suis pas certain de bien saisir.",
+      "englishTranslation": "Could you clarify your point? I'm not sure I fully grasped it.",
       "explanation": "Demande de clarification polie sans sous-entendre que l'autre s'est mal exprimé.",
+      "explanationEn": "Polite request for clarification without implying poor communication from the other party.",
       "exampleUsage": "Sur la partie migration de données, pourrais-tu préciser ta pensée ? Je ne suis pas certain de bien saisir.",
       "category": "BUREAU",
       "level": "INTERMEDIAIRE",
@@ -122,7 +153,9 @@
       "id": "exp_04",
       "lessonId": "les_salutations_bureau",
       "frenchText": "Navré pour ce contretemps, nous mettons tout en œuvre pour rétablir la situation.",
+      "englishTranslation": "Apologies for this setback, we are doing our utmost to resolve the situation.",
       "explanation": "Excuses professionnelles orientées immédiatement vers la prise en charge du problème.",
+      "explanationEn": "Professional apology immediately focused on taking charge of the solution.",
       "exampleUsage": "Navré pour ce contretemps sur le serveur de pré-production, nous mettons tout en œuvre pour rétablir la situation.",
       "category": "BUREAU",
       "level": "INTERMEDIAIRE",
@@ -132,7 +165,9 @@
       "id": "exp_05",
       "lessonId": "les_vocabulaire_projet",
       "frenchText": "Nous devons faire un arbitrage rapide pour ne pas décaler le jalon de livraison.",
+      "englishTranslation": "We need to make a quick trade-off so as not to postpone the delivery milestone.",
       "explanation": "Faire un arbitrage signifie trancher entre deux options concurrentes pour préserver l'objectif.",
+      "explanationEn": "Making a trade-off/decision between competing priorities to stay on track.",
       "exampleUsage": "Face aux retards de validation, nous devons faire un arbitrage rapide pour ne pas décaler le jalon de livraison.",
       "category": "TECHNIQUE",
       "level": "INTERMEDIAIRE",
@@ -142,7 +177,9 @@
       "id": "exp_06",
       "lessonId": "les_vocabulaire_projet",
       "frenchText": "Ce livrable est bloquant pour la suite des développements.",
+      "englishTranslation": "This deliverable is a blocker for subsequent development work.",
       "explanation": "Indique une dépendance critique : sans cet élément, l'équipe ne peut plus progresser.",
+      "explanationEn": "Highlights a critical dependency: progress is halted without this asset.",
       "exampleUsage": "La validation des maquettes Figma par le client est bloquante pour la suite des développements.",
       "category": "TECHNIQUE",
       "level": "DEBUTANT",
@@ -152,7 +189,9 @@
       "id": "exp_07",
       "lessonId": "les_vocabulaire_projet",
       "frenchText": "Pouvons-nous définir ensemble les critères d'acceptation du ticket ?",
-      "explanation": "Définit les conditions mesurables pour considérer qu'une fonctionnalité est terminée et conforme.",
+      "englishTranslation": "Can we define together the acceptance criteria for this ticket?",
+      "explanation": "Définit les conditions mesurables pour considérer qu'une tâche est terminée et conforme.",
+      "explanationEn": "Establishes measurable criteria to mark a task as completed and compliant.",
       "exampleUsage": "Avant de lancer le sprint, pouvons-nous définir ensemble les critères d'acceptation du ticket d'authentification ?",
       "category": "TECHNIQUE",
       "level": "INTERMEDIAIRE",
@@ -162,7 +201,9 @@
       "id": "exp_08",
       "lessonId": "les_vocabulaire_projet",
       "frenchText": "Nous constatons un glissement de calendrier dû à des imprévus techniques.",
+      "englishTranslation": "We are experiencing a schedule slippage due to unexpected technical issues.",
       "explanation": "Expression diplomatique pour signaler un retard sans accuser directement une personne.",
+      "explanationEn": "Diplomatic way to signal a timeline delay without blaming an individual.",
       "exampleUsage": "Au niveau du lot 2, nous constatons un glissement de calendrier de trois jours dû à des imprévus techniques.",
       "category": "TECHNIQUE",
       "level": "AVANCE",
@@ -172,7 +213,9 @@
       "id": "exp_09",
       "lessonId": "les_vocabulaire_projet",
       "frenchText": "Il est préférable d'adresser cette dette technique avant la mise en production.",
+      "englishTranslation": "It is preferable to address this technical debt before going live.",
       "explanation": "La dette technique désigne les compromis de code qui risquent de ralentir le projet plus tard.",
+      "explanationEn": "Technical debt refers to shortcuts in code that may slow down future maintenance.",
       "exampleUsage": "Pour garantir la pérennité du système, il est préférable d'adresser cette dette technique avant la mise en production.",
       "category": "TECHNIQUE",
       "level": "AVANCE",
@@ -182,7 +225,9 @@
       "id": "exp_10",
       "lessonId": "les_emails_pros",
       "frenchText": "Je me permets de revenir vers vous concernant notre échange téléphonique.",
+      "englishTranslation": "I am following up with you regarding our phone conversation.",
       "explanation": "Formulation courtoise idéale pour débuter un email de suivi ou de relance.",
+      "explanationEn": "Standard courteous phrasing to open a follow-up email.",
       "exampleUsage": "Bonjour Madame Mercier, je me permets de revenir vers vous concernant notre échange téléphonique de ce matin.",
       "category": "EMAIL",
       "level": "DEBUTANT",
@@ -192,7 +237,9 @@
       "id": "exp_11",
       "lessonId": "les_emails_pros",
       "frenchText": "Veuillez trouver ci-joint le compte rendu d'activité pour validation.",
+      "englishTranslation": "Please find attached the activity report for your approval.",
       "explanation": "Formule formelle et soignée pour transmettre une pièce jointe importante.",
+      "explanationEn": "Polite formal phrasing for attaching an important document.",
       "exampleUsage": "Veuillez trouver ci-joint le compte rendu d'activité du mois d'octobre pour validation de votre part.",
       "category": "EMAIL",
       "level": "DEBUTANT",
@@ -202,7 +249,9 @@
       "id": "exp_12",
       "lessonId": "les_emails_pros",
       "frenchText": "Sans retour de votre part d'ici jeudi, nous reconduirons le paramétrage par défaut.",
+      "englishTranslation": "Without hearing from you by Thursday, we will proceed with the default settings.",
       "explanation": "Fixe une échéance claire et constructive sans paraître agressif.",
+      "explanationEn": "Sets a constructive deadline without sounding aggressive.",
       "exampleUsage": "Afin de ne pas bloquer le déploiement, sans retour de votre part d'ici jeudi, nous reconduirons le paramétrage par défaut.",
       "category": "EMAIL",
       "level": "INTERMEDIAIRE",
@@ -212,7 +261,9 @@
       "id": "exp_13",
       "lessonId": "les_emails_pros",
       "frenchText": "Je reste à votre entière disposition pour tout complément d'information.",
+      "englishTranslation": "I remain at your complete disposal should you require further information.",
       "explanation": "Conclusion d'email très professionnelle et serviable avant la salutation finale.",
+      "explanationEn": "Courteous and obliging closing formula for business correspondence.",
       "exampleUsage": "En espérant que cette synthèse réponde à vos attentes, je reste à votre entière disposition pour tout complément d'information.",
       "category": "EMAIL",
       "level": "DEBUTANT",
@@ -222,7 +273,9 @@
       "id": "exp_14",
       "lessonId": "les_emails_pros",
       "frenchText": "Pourriez-vous m'accuser bonne réception de ce document ?",
+      "englishTranslation": "Could you please acknowledge receipt of this document?",
       "explanation": "Demande polie pour confirmer qu'un fichier ou contrat a bien été reçu.",
+      "explanationEn": "Polite request to confirm that a document has arrived safely.",
       "exampleUsage": "Voici la dernière version du protocole d'accord. Pourriez-vous m'accuser bonne réception de ce document ?",
       "category": "EMAIL",
       "level": "INTERMEDIAIRE",
@@ -232,7 +285,9 @@
       "id": "exp_15",
       "lessonId": "les_ouvrir_reunion",
       "frenchText": "Je vous propose que nous fassions un rapide tour de table avant d'entamer l'ordre du jour.",
-      "explanation": "Invitation collaborative pour lancer la réunion et permettre à chacun de s'exprimer.",
+      "englishTranslation": "I suggest a quick round-table introduction before we begin the agenda.",
+      "explanation": "Invitation collaborative pour lancer la réunion et donner la parole à tous.",
+      "explanationEn": "Inclusive invitation to kick off the meeting with brief introductions.",
       "exampleUsage": "Bienvenue à tous. Je vous propose que nous fassions un rapide tour de table avant d'entamer l'ordre du jour.",
       "category": "REUNION",
       "level": "INTERMEDIAIRE",
@@ -242,7 +297,9 @@
       "id": "exp_16",
       "lessonId": "les_ouvrir_reunion",
       "frenchText": "L'objectif principal de ce point est d'aligner nos priorités pour le prochain trimestre.",
+      "englishTranslation": "The main goal of this session is to align our priorities for the upcoming quarter.",
       "explanation": "Clarifie dès la première minute la finalité opérationnelle de la rencontre.",
+      "explanationEn": "Clarifies the operational goal right from the opening minute.",
       "exampleUsage": "L'objectif principal de ce point est d'aligner nos priorités pour le prochain trimestre et d'identifier les ressources manquantes.",
       "category": "REUNION",
       "level": "INTERMEDIAIRE",
@@ -252,7 +309,9 @@
       "id": "exp_17",
       "lessonId": "les_ouvrir_reunion",
       "frenchText": "Nous avons convenu de 45 minutes, je serai garant du respect du timing.",
+      "englishTranslation": "We agreed on 45 minutes; I will ensure we stay strictly on time.",
       "explanation": "Rassure les participants sur l'efficacité et la ponctualité de la réunion.",
+      "explanationEn": "Reassures participants regarding time management and punctuality.",
       "exampleUsage": "Merci d'être ponctuels. Nous avons convenu de 45 minutes, je serai garant du respect du timing pour que chacun puisse enchaîner.",
       "category": "REUNION",
       "level": "INTERMEDIAIRE",
@@ -262,7 +321,9 @@
       "id": "exp_18",
       "lessonId": "les_ouvrir_reunion",
       "frenchText": "Si personne n'y voit d'inconvénient, je propose d'enregistrer la séance pour les absents.",
+      "englishTranslation": "If no one objects, I propose recording the session for those unable to attend.",
       "explanation": "Demande de consentement courtoise et professionnelle pour l'enregistrement visio.",
+      "explanationEn": "Polite request for consent before recording a video conference.",
       "exampleUsage": "Puisque plusieurs collègues sont en déplacement, si personne n'y voit d'inconvénient, je propose d'enregistrer la séance pour les absents.",
       "category": "REUNION",
       "level": "INTERMEDIAIRE",
@@ -272,7 +333,9 @@
       "id": "exp_19",
       "lessonId": "les_intervenir_reunion",
       "frenchText": "Je partage entièrement cette approche, cela nous permettra de sécuriser les jalons.",
+      "englishTranslation": "I fully support this approach; it will allow us to secure our milestones.",
       "explanation": "Exprimer une adhésion franche et argumentée à l'idée d'un collègue.",
+      "explanationEn": "Expressing clear and reasoned agreement with a peer's proposal.",
       "exampleUsage": "Je partage entièrement cette approche sur l'automatisation des tests, cela nous permettra de sécuriser les jalons.",
       "category": "REUNION",
       "level": "DEBUTANT",
@@ -282,7 +345,9 @@
       "id": "exp_20",
       "lessonId": "les_intervenir_reunion",
       "frenchText": "Je rejoins votre point de vue sur le principe, mais nous devons mesurer l'impact budgétaire.",
+      "englishTranslation": "I agree in principle, however we must evaluate the budgetary impact.",
       "explanation": "Formule diplomatique classique pour objecter sans braquer son interlocuteur.",
+      "explanationEn": "Diplomatic formula to raise objections constructively without antagonizing.",
       "exampleUsage": "Je rejoins votre point de vue sur le principe, mais nous devons mesurer l'impact budgétaire avant de contractualiser.",
       "category": "REUNION",
       "level": "AVANCE",
@@ -292,7 +357,9 @@
       "id": "exp_21",
       "lessonId": "les_intervenir_reunion",
       "frenchText": "Puis-je me permettre une précision à ce stade de la discussion ?",
+      "englishTranslation": "May I offer a quick clarification at this point in the discussion?",
       "explanation": "Manière très polie de demander la parole sans couper brusquement la personne.",
+      "explanationEn": "Polite interjection to speak without abruptly cutting someone off.",
       "exampleUsage": "Puis-je me permettre une précision à ce stade de la discussion concernant l'architecture réseau ?",
       "category": "REUNION",
       "level": "INTERMEDIAIRE",
@@ -302,7 +369,9 @@
       "id": "exp_22",
       "lessonId": "les_intervenir_reunion",
       "frenchText": "Pour éviter de nous disperser, je propose de traiter ce point connexe en aparté.",
+      "englishTranslation": "To avoid going off-topic, I suggest discussing this related point offline.",
       "explanation": "Recadre les débats hors sujet pour respecter l'ordre du jour initial.",
+      "explanationEn": "Refocuses the meeting to maintain the original agenda.",
       "exampleUsage": "C'est une excellente remarque, mais pour éviter de nous disperser, je propose de traiter ce point connexe en aparté après la réunion.",
       "category": "REUNION",
       "level": "AVANCE",
@@ -312,7 +381,9 @@
       "id": "exp_23",
       "lessonId": "les_accueil_client",
       "frenchText": "Ravi de vous rencontrer. Comment puis-je vous accompagner dans votre démarche ?",
+      "englishTranslation": "Delighted to meet you. How may I assist you with your project today?",
       "explanation": "Accueil chaleureux, professionnel et centré sur le service apporté au client.",
+      "explanationEn": "Warm, client-centric professional welcome.",
       "exampleUsage": "Bonjour Monsieur Laroche, ravi de vous rencontrer. Comment puis-je vous accompagner dans votre démarche aujourd'hui ?",
       "category": "CLIENT",
       "level": "DEBUTANT",
@@ -322,7 +393,9 @@
       "id": "exp_24",
       "lessonId": "les_accueil_client",
       "frenchText": "Pour être certain de bien cerner vos attentes, quels sont vos critères déterminants ?",
+      "englishTranslation": "To ensure we fully capture your expectations, what are your decisive criteria?",
       "explanation": "Question ouverte d'écoute active pour explorer les besoins stratégiques.",
+      "explanationEn": "Open discovery question for active scoping of strategic priorities.",
       "exampleUsage": "Pour être certain de bien cerner vos attentes, quels sont vos critères déterminants en termes d'évolutivité et de support ?",
       "category": "CLIENT",
       "level": "INTERMEDIAIRE",
@@ -332,7 +405,9 @@
       "id": "exp_25",
       "lessonId": "les_accueil_client",
       "frenchText": "Si je résume votre besoin, vous recherchez avant tout une solution clé en main.",
-      "explanation": "Technique de reformulation pour valider la bonne compréhension et instaurer la confiance.",
+      "englishTranslation": "If I summarize correctly, you are primarily looking for a turnkey solution.",
+      "explanation": "Technique de reformulation pour valider la compréhension et instaurer la confiance.",
+      "explanationEn": "Restatement technique to confirm alignment and build rapport.",
       "exampleUsage": "Si je résume votre besoin, vous recherchez avant tout une solution clé en main capable de s'intégrer à votre SI actuel.",
       "category": "CLIENT",
       "level": "INTERMEDIAIRE",
@@ -342,7 +417,9 @@
       "id": "exp_26",
       "lessonId": "les_accueil_client",
       "frenchText": "Cette solution a fait ses preuves auprès d'acteurs ayant des volumétries similaires.",
+      "englishTranslation": "This solution has proven its worth with clients of comparable scale.",
       "explanation": "Argument de réassurance par la preuve sociale et l'expérience terrain.",
+      "explanationEn": "Reassurance argument using social proof and proven track records.",
       "exampleUsage": "Vous pouvez avoir l'esprit tranquille : cette solution a fait ses preuves auprès d'acteurs ayant des volumétries similaires.",
       "category": "CLIENT",
       "level": "AVANCE",
@@ -352,7 +429,9 @@
       "id": "exp_27",
       "lessonId": "les_reclamation_client",
       "frenchText": "Nous comprenons parfaitement votre agacement et nous prenons votre demande très au sérieux.",
+      "englishTranslation": "We completely understand your frustration and are taking your concern very seriously.",
       "explanation": "Posture d'empathie sincère indispensable pour calmer l'irritation d'un client insatisfait.",
+      "explanationEn": "Empathetic stance essential for de-escalating customer dissatisfaction.",
       "exampleUsage": "Nous comprenons parfaitement votre agacement suite à cette interruption de service et nous prenons votre demande très au sérieux.",
       "category": "CLIENT",
       "level": "INTERMEDIAIRE",
@@ -362,7 +441,9 @@
       "id": "exp_28",
       "lessonId": "les_reclamation_client",
       "frenchText": "Voici le plan d'action immédiat que nous mettons en place pour résoudre cette anomalie.",
+      "englishTranslation": "Here is the immediate action plan we are enacting to resolve this issue.",
       "explanation": "Bascule immédiatement de la plainte vers une solution concrète et opérationnelle.",
+      "explanationEn": "Instantly pivots from the complaint to concrete operational remediation.",
       "exampleUsage": "Sans attendre, voici le plan d'action immédiat que nous mettons en place pour résoudre cette anomalie d'affichage.",
       "category": "CLIENT",
       "level": "INTERMEDIAIRE",
@@ -372,7 +453,9 @@
       "id": "exp_29",
       "lessonId": "les_reclamation_client",
       "frenchText": "À titre de geste commercial, nous vous proposons d'intégrer ce module sans surcoût.",
+      "englishTranslation": "As a commercial gesture, we offer to include this module at no extra charge.",
       "explanation": "Proposition de compensation financière ou fonctionnelle pour fidéliser le client.",
+      "explanationEn": "Goodwill gesture offering added value to maintain client satisfaction.",
       "exampleUsage": "Pour compenser le délai de livraison, à titre de geste commercial, nous vous proposons d'intégrer ce module sans surcoût.",
       "category": "CLIENT",
       "level": "AVANCE",
@@ -382,7 +465,9 @@
       "id": "exp_30",
       "lessonId": "les_reclamation_client",
       "frenchText": "Pouvons-nous convenir d'un rendez-vous vendredi pour faire le bilan de ces ajustements ?",
+      "englishTranslation": "Could we schedule a meeting on Friday to review the outcome of these adjustments?",
       "explanation": "Verrouille un suivi qualité pour prouver au client son importance sur la durée.",
+      "explanationEn": "Locks in a quality follow-up meeting demonstrating commitment.",
       "exampleUsage": "Pouvons-nous convenir d'un rendez-vous vendredi pour faire le bilan de ces ajustements et vérifier que tout fonctionne à 100% ?",
       "category": "CLIENT",
       "level": "INTERMEDIAIRE",
@@ -392,7 +477,9 @@
       "id": "exp_31",
       "lessonId": "les_appels_pros",
       "frenchText": "Pourriez-vous me mettre en relation avec la personne en charge du projet ?",
+      "englishTranslation": "Could you please put me through to the person in charge of this project?",
       "explanation": "Demande standard au standard téléphonique pour atteindre le bon interlocuteur.",
+      "explanationEn": "Standard request to a switchboard to reach the project lead.",
       "exampleUsage": "Bonjour, je suis Thomas de la société Novatech. Pourriez-vous me mettre en relation avec la personne en charge du projet ?",
       "category": "APPEL",
       "level": "DEBUTANT",
@@ -402,7 +489,9 @@
       "id": "exp_32",
       "lessonId": "les_appels_pros",
       "frenchText": "La ligne est occupée pour le moment, préférez-vous patienter ou laisser un message ?",
+      "englishTranslation": "The line is currently busy, would you rather hold or leave a message?",
       "explanation": "Accueil téléphonique courtois proposant des options claires au correspondant.",
+      "explanationEn": "Polite call management offering options to the caller.",
       "exampleUsage": "Madame Laurent est en ligne pour le moment, préférez-vous patienter ou lui laisser un message sur sa boîte vocale ?",
       "category": "APPEL",
       "level": "INTERMEDIAIRE",
@@ -412,7 +501,9 @@
       "id": "exp_33",
       "lessonId": "les_appels_pros",
       "frenchText": "Je vous entends très mal, pourriez-vous désactiver votre haut-parleur ?",
+      "englishTranslation": "I am having trouble hearing you, could you please turn off your speakerphone?",
       "explanation": "Gestion diplomate d'un problème technique d'audio sans vexer l'appelant.",
+      "explanationEn": "Diplomatic handling of audio issues during remote calls.",
       "exampleUsage": "Excusez-moi, il y a un écho important sur la ligne. Je vous entends très mal, pourriez-vous désactiver votre haut-parleur ?",
       "category": "APPEL",
       "level": "DEBUTANT",
@@ -422,7 +513,9 @@
       "id": "exp_34",
       "lessonId": "les_appels_pros",
       "frenchText": "C'est bien noté. Je lui transmets votre message dès la fin de sa réunion.",
+      "englishTranslation": "Noted with thanks. I will pass on your message right after their meeting.",
       "explanation": "Prise de message professionnelle avec engagement de restitution rapide.",
+      "explanationEn": "Professional message taking with a clear relay commitment.",
       "exampleUsage": "C'est bien noté, monsieur Bernard. Je lui transmets votre message dès la fin de sa réunion à 15 heures.",
       "category": "APPEL",
       "level": "DEBUTANT",
@@ -432,7 +525,9 @@
       "id": "exp_35",
       "lessonId": "les_salutations_bureau",
       "frenchText": "Je te tiens informé dès que j'ai du nouveau de la part de la direction.",
+      "englishTranslation": "I will keep you posted as soon as I hear back from leadership.",
       "explanation": "Promesse de suivi régulier et transparent envers son équipe.",
+      "explanationEn": "Assurance of prompt updates once management responds.",
       "exampleUsage": "Ne t'inquiète pas, je te tiens informé dès que j'ai du nouveau de la part de la direction concernant le budget.",
       "category": "BUREAU",
       "level": "DEBUTANT",
@@ -442,7 +537,9 @@
       "id": "exp_36",
       "lessonId": "les_emails_pros",
       "frenchText": "En réponse à votre sollicitation, voici un récapitulatif détaillé de nos engagements.",
+      "englishTranslation": "In response to your inquiry, here is a detailed summary of our commitments.",
       "explanation": "Idéal pour entamer un devis ou une proposition d'accompagnement par écrit.",
+      "explanationEn": "Ideal opening for presenting a proposal or service quote.",
       "exampleUsage": "Bonjour Monsieur, en réponse à votre sollicitation, voici un récapitulatif détaillé de nos engagements et délais de réalisation.",
       "category": "EMAIL",
       "level": "INTERMEDIAIRE",
@@ -455,6 +552,7 @@
       "lessonId": "les_ouvrir_reunion",
       "type": "MCQ",
       "questionOrPrompt": "Quelle formule est la plus professionnelle pour cadrer le timing d'une réunion dès le début ?",
+      "questionOrPromptEn": "Which formula is most professional to set meeting timing from the start?",
       "options": [
         "On a 30 minutes et après je m'en vais.",
         "Nous avons convenu de 45 minutes, je serai garant du respect du timing.",
@@ -462,13 +560,15 @@
         "Dépêchons-nous sinon on n'aura jamais le temps."
       ],
       "correctAnswer": "Nous avons convenu de 45 minutes, je serai garant du respect du timing.",
-      "explanation": "Cette formulation affirme un leadership rassurant, structuré et bienveillant."
+      "explanation": "Cette formulation affirme un leadership rassurant, structuré et bienveillant.",
+      "explanationEn": "Asserts reassuring, structured, and courteous leadership."
     },
     {
       "id": "ex_02",
       "lessonId": "les_intervenir_reunion",
       "type": "MCQ",
       "questionOrPrompt": "Comment formuler poliment une objection sur une idée en réunion sans froisser son collègue ?",
+      "questionOrPromptEn": "How to raise an objection politely in a meeting without offending your peer?",
       "options": [
         "Votre idée n'a aucun sens économique.",
         "Je rejoins votre point de vue sur le principe, mais nous devons mesurer l'impact budgétaire.",
@@ -476,13 +576,15 @@
         "Vous devriez revoir complètement vos calculs."
       ],
       "correctAnswer": "Je rejoins votre point de vue sur le principe, mais nous devons mesurer l'impact budgétaire.",
-      "explanation": "La formule valide d'abord l'intention positive (principe) avant de poser la réserve pratique (budget)."
+      "explanation": "La formule valide d'abord l'intention positive (principe) avant de poser la réserve pratique (budget).",
+      "explanationEn": "Validates the positive intent first before raising practical budget constraints."
     },
     {
       "id": "ex_03",
       "lessonId": "les_accueil_client",
       "type": "MCQ",
       "questionOrPrompt": "Quelle question ouverte permet de qualifier précisément les attentes d'un nouveau client ?",
+      "questionOrPromptEn": "Which open question effectively scopes a new client's core needs?",
       "options": [
         "Vous signez aujourd'hui ou demain ?",
         "Pour être certain de bien cerner vos attentes, quels sont vos critères déterminants ?",
@@ -490,13 +592,15 @@
         "Quel est votre avis sur nos concurrents ?"
       ],
       "correctAnswer": "Pour être certain de bien cerner vos attentes, quels sont vos critères déterminants ?",
-      "explanation": "Une question ouverte d'écoute active permet au client d'exprimer librement ses priorités."
+      "explanation": "Une question ouverte d'écoute active permet au client d'exprimer librement ses priorités.",
+      "explanationEn": "An open active-listening question lets the client freely articulate their priorities."
     },
     {
       "id": "ex_04",
       "lessonId": "les_reclamation_client",
       "type": "MCQ",
       "questionOrPrompt": "Face à un client très mécontent d'un bug, quelle doit être votre première réaction ?",
+      "questionOrPromptEn": "When facing a client furious over a bug, what should your first reaction be?",
       "options": [
         "Lui dire que ce n'est pas de votre faute mais de celle des serveurs.",
         "Nous comprenons parfaitement votre agacement et nous prenons votre demande très au sérieux.",
@@ -504,13 +608,15 @@
         "Contester ses remarques point par point."
       ],
       "correctAnswer": "Nous comprenons parfaitement votre agacement et nous prenons votre demande très au sérieux.",
-      "explanation": "La reconnaissance empathique est le prérequis indispensable avant de proposer toute solution technique."
+      "explanation": "La reconnaissance empathique est le prérequis indispensable avant de proposer toute solution technique.",
+      "explanationEn": "Empathetic acknowledgment is mandatory before proposing technical remediation."
     },
     {
       "id": "ex_05",
       "lessonId": "les_emails_pros",
       "type": "MCQ",
       "questionOrPrompt": "Quelle phrase est la plus adaptée pour conclure un email professionnel à un prospect ?",
+      "questionOrPromptEn": "Which closing sentence is most suitable in a business email to a prospect?",
       "options": [
         "Répondez-moi vite.",
         "Je reste à votre entière disposition pour tout complément d'information.",
@@ -518,13 +624,15 @@
         "J'attends votre virement."
       ],
       "correctAnswer": "Je reste à votre entière disposition pour tout complément d'information.",
-      "explanation": "C'est la conclusion de référence pour manifester disponibilité et courtoisie."
+      "explanation": "C'est la conclusion de référence pour manifester disponibilité et courtoisie.",
+      "explanationEn": "The benchmark sentence showing availability and polite service."
     },
     {
       "id": "ex_06",
       "lessonId": "les_vocabulaire_projet",
       "type": "MCQ",
       "questionOrPrompt": "Que signifie l'expression 'dette technique' dans un contexte de développement ou de projet IT ?",
+      "questionOrPromptEn": "What does 'technical debt' signify in an IT software development context?",
       "options": [
         "Une facture impayée auprès d'un fournisseur cloud.",
         "Le coût cumulé des raccourcis de conception ou de code qu'il faudra corriger plus tard.",
@@ -532,13 +640,15 @@
         "Le matériel informatique défectueux à remplacer."
       ],
       "correctAnswer": "Le coût cumulé des raccourcis de conception ou de code qu'il faudra corriger plus tard.",
-      "explanation": "La dette technique désigne les compromis de qualité qui risquent d'alourdir la maintenance future."
+      "explanation": "La dette technique désigne les compromis de qualité qui risquent d'alourdir la maintenance future.",
+      "explanationEn": "Technical debt reflects code/design shortcuts that increase future maintenance cost."
     },
     {
       "id": "ex_07",
       "lessonId": "les_appels_pros",
       "type": "MCQ",
       "questionOrPrompt": "Que dites-vous pour faire patienter poliment un client au téléphone pendant que vous cherchez son dossier ?",
+      "questionOrPromptEn": "What do you say to politely place a customer on brief hold while looking up their file?",
       "options": [
         "Attendez là, je cherche.",
         "Je consulte votre dossier informatique, je vous invite à patienter quelques instants.",
@@ -546,70 +656,85 @@
         "Rappelez dans une heure, mon logiciel plante."
       ],
       "correctAnswer": "Je consulte votre dossier informatique, je vous invite à patienter quelques instants.",
-      "explanation": "Cette formulation allie transparence, courtoisie et maîtrise de la situation."
+      "explanation": "Cette formulation allie transparence, courtoisie et maîtrise de la situation.",
+      "explanationEn": "Balances transparency, courtesy, and professional control of the call."
     },
     {
       "id": "ex_08",
       "lessonId": "les_vocabulaire_projet",
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Nous devons faire un ___ rapide pour ne pas décaler le jalon de livraison.",
+      "questionOrPromptEn": "We need to make a quick ___ to avoid delaying the delivery milestone.",
       "options": ["arbitrage", "reproche", "oubli", "retard"],
       "correctAnswer": "arbitrage",
-      "explanation": "L'arbitrage est la décision hiérarchique ou technique qui tranche entre plusieurs priorités."
+      "explanation": "L'arbitrage est la décision hiérarchique ou technique qui tranche entre plusieurs priorités.",
+      "explanationEn": "Trade-off / decision making priority between options."
     },
     {
       "id": "ex_09",
       "lessonId": "les_emails_pros",
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Je me permets de ___ vers vous concernant notre échange téléphonique de ce matin.",
+      "questionOrPromptEn": "I take the liberty to ___ to you regarding our phone call this morning.",
       "options": ["revenir", "plaindre", "courir", "douter"],
       "correctAnswer": "revenir",
-      "explanation": "L'expression 'revenir vers vous' est la formule consacrée pour recontacter un interlocuteur."
+      "explanation": "L'expression 'revenir vers vous' est la formule consacrée pour recontacter un interlocuteur.",
+      "explanationEn": "'Revenir vers vous' is the idiomatic phrase for following up."
     },
     {
       "id": "ex_10",
       "lessonId": "les_reclamation_client",
       "type": "FILL_BLANKS",
       "questionOrPrompt": "À titre de geste ___, nous vous proposons d'intégrer cette fonctionnalité sans surcoût.",
+      "questionOrPromptEn": "As a ___ gesture, we offer to include this feature at no extra cost.",
       "options": ["commercial", "gratuit", "amical", "secret"],
       "correctAnswer": "commercial",
-      "explanation": "Un 'geste commercial' est une concession consentie à un client pour fidéliser la relation."
+      "explanation": "Un 'geste commercial' est une concession consentie à un client pour fidéliser la relation.",
+      "explanationEn": "A 'geste commercial' is a goodwill concession offered to nurture client relationships."
     },
     {
       "id": "ex_11",
       "lessonId": "les_ouvrir_reunion",
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Je vous propose que nous fassions un rapide tour de ___ avant d'aborder l'ordre du jour.",
+      "questionOrPromptEn": "I propose we do a quick round of the ___ before discussing the agenda.",
       "options": ["table", "bureau", "ville", "carte"],
       "correctAnswer": "table",
-      "explanation": "Un 'tour de table' désigne l'expression successive de chacun des participants en début de réunion."
+      "explanation": "Un 'tour de table' désigne l'expression successive de chacun des participants en début de réunion.",
+      "explanationEn": "A 'tour de table' is a round-table check-in at the start of a meeting."
     },
     {
       "id": "ex_12",
       "lessonId": "les_salutations_bureau",
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Pourrais-tu préciser ta ___ ? Je ne suis pas certain de bien saisir les enjeux.",
+      "questionOrPromptEn": "Could you clarify your ___? I am not sure I grasp the issues.",
       "options": ["pensée", "colère", "force", "famille"],
       "correctAnswer": "pensée",
-      "explanation": "'Préciser sa pensée' est une tournure polie pour demander plus de détails sans juger."
+      "explanation": "'Préciser sa pensée' est une tournure polie pour demander plus de détails sans juger.",
+      "explanationEn": "'Préciser sa pensée' is polite phrasing to ask for elaboration non-judgmentally."
     },
     {
       "id": "ex_13",
       "lessonId": "les_accueil_client",
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Si je résume votre besoin, vous recherchez une solution clé en ___.",
+      "questionOrPromptEn": "If I summarize your need, you are looking for a key in ___ solution.",
       "options": ["main", "or", "poche", "tête"],
       "correctAnswer": "main",
-      "explanation": "Une solution 'clé en main' désigne une solution immédiatement opérationnelle et complète."
+      "explanation": "Une solution 'clé en main' désigne une solution immédiatement opérationnelle et complète.",
+      "explanationEn": "'Clé en main' translates to turnkey / ready-to-use."
     },
     {
       "id": "ex_14",
       "lessonId": "les_appels_pros",
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Madame Martin est occupée, préférez-vous ___ ou lui laisser un message ?",
+      "questionOrPromptEn": "Mrs. Martin is busy, would you prefer to ___ or leave a message?",
       "options": ["patienter", "raccrocher", "crier", "partir"],
       "correctAnswer": "patienter",
-      "explanation": "'Patienter' est le verbe adéquat pour inviter courtoisement un correspondant à attendre en ligne."
+      "explanation": "'Patienter' est le verbe adéquat pour inviter courtoisement un correspondant à attendre en ligne.",
+      "explanationEn": "'Patienter' is the polite verb for holding on the phone."
     }
   ],
   "dialogues": [
@@ -622,30 +747,35 @@
           "speaker": "Sarah",
           "role": "Chef de projet",
           "frenchText": "Bonjour à tous. À l'ordre du jour aujourd'hui : la revue de l'avancement et les risques sur la date de déploiement.",
+          "englishTranslation": "Hello everyone. On the agenda today: progress review and risks concerning the deployment date.",
           "notes": "Ouverture formelle et claire des débats."
         },
         {
           "speaker": "Julien",
           "role": "Lead Développeur",
           "frenchText": "Pour tenir le délai initial sans accumuler de dette technique, il faudrait reporter l'export avancé au sprint suivant.",
+          "englishTranslation": "To meet the initial deadline without accumulating technical debt, we should postpone the advanced export to the next sprint.",
           "notes": "Proposition d'arbitrage pragmatique basée sur la qualité."
         },
         {
           "speaker": "Sarah",
           "role": "Chef de projet",
           "frenchText": "Je rejoins votre analyse sur le fond, mais le client attend impérativement cette fonctionnalité pour la fin du mois.",
+          "englishTranslation": "I agree with your analysis in principle, however the client expects this feature by the end of the month.",
           "notes": "Objection diplomatique rappelant l'engagement commercial."
         },
         {
           "speaker": "Julien",
           "role": "Lead Développeur",
           "frenchText": "Dans ce cas, nous pourrions livrer une première version simplifiée et enrichir les filtres dans un second temps.",
+          "englishTranslation": "In that case, we could deliver a first simplified version and enrich the filters in a second phase.",
           "notes": "Compromis intelligent ('MVP' ou lotissement)."
         },
         {
           "speaker": "Sarah",
           "role": "Chef de projet",
           "frenchText": "C'est un excellent compromis. Je valide cette option et j'en informe le client dans le compte rendu de cet après-midi.",
+          "englishTranslation": "That is an excellent compromise. I approve this option and will inform the client in this afternoon's meeting minutes.",
           "notes": "Décision actée et engagement de traçabilité écrite."
         }
       ]
@@ -659,39 +789,214 @@
           "speaker": "M. Vasseur",
           "role": "Directeur Client",
           "frenchText": "Bonjour Camille. Nous constatons un retard sur la livraison du module de facturation, ce qui perturbe nos équipes comptables.",
+          "englishTranslation": "Good morning Camille. We noticed a delay on the invoicing module delivery, which is disrupting our accounting teams.",
           "notes": "Exposé mesuré mais ferme d'une insatisfaction."
         },
         {
           "speaker": "Camille",
           "role": "Consultante Senior",
           "frenchText": "Bonjour Monsieur Vasseur. Nous comprenons parfaitement votre agacement et nous prenons cette situation très au sérieux.",
+          "englishTranslation": "Good morning Mr. Vasseur. We fully understand your annoyance and are taking this situation very seriously.",
           "notes": "Empathie immédiate, sans déni ni esquive."
         },
         {
           "speaker": "Camille",
           "role": "Consultante Senior",
           "frenchText": "Voici notre plan d'action : nous déployons un correctif sur votre environnement de test d'ici 14 heures pour une validation conjointe.",
+          "englishTranslation": "Here is our action plan: we are deploying a patch to your staging environment by 2 PM for joint validation.",
           "notes": "Prise en main opérationnelle avec engagement d'heure précis."
         },
         {
           "speaker": "M. Vasseur",
           "role": "Directeur Client",
           "frenchText": "C'est rassurant. Pouvons-nous prévoir une formation express pour mes collaborateurs vendredi matin ?",
+          "englishTranslation": "That is reassuring. Could we schedule an express training session for my staff on Friday morning?",
           "notes": "Demande de consolidation de la solution."
         },
         {
           "speaker": "Camille",
           "role": "Consultante Senior",
           "frenchText": "Tout à fait. À titre de geste commercial, nous assurerons cette session d'une heure sans facturation additionnelle.",
+          "englishTranslation": "Absolutely. As a gesture of goodwill, we will deliver this one-hour session at no extra charge.",
           "notes": "Fidélisation par un geste commercial opportun."
         },
         {
           "speaker": "M. Vasseur",
           "role": "Directeur Client",
           "frenchText": "Je vous remercie pour votre réactivité et votre professionnalisme. Rendez-vous vendredi.",
+          "englishTranslation": "Thank you for your prompt response and professionalism. See you on Friday.",
           "notes": "Clôture positive et confiance rétablie."
         }
       ]
+    }
+  ],
+  "simulations": [
+    {
+      "id": "sim_reunion_arbitrage",
+      "title": "Arbitrage budgétaire sous tension en réunion",
+      "titleEn": "Budget Trade-off Meeting Under Pressure",
+      "context": "Le directeur de division annonce une coupe budgétaire de 15% sur votre projet à mi-parcours.",
+      "contextEn": "The department director announces a 15% budget cut midway through your project.",
+      "category": "REUNION",
+      "initialStepId": "step_1",
+      "steps": [
+        {
+          "stepId": "step_1",
+          "characterSpeaker": "Alain (Directeur de Division)",
+          "characterRole": "Directeur de Division",
+          "dialoguePrompt": "Nous devons réduire l'enveloppe de 15% d'ici ce soir. Si nous ne tranchons pas, le projet sera mis en pause.",
+          "dialoguePromptEn": "We must cut the envelope by 15% by tonight. If we don't decide, the project will be paused.",
+          "choices": [
+            {
+              "choiceId": "c1",
+              "text": "C'est impossible, vous n'aviez qu'à mieux prévoir le budget au départ !",
+              "englishTranslation": "That's impossible, you should have planned the budget better initially!",
+              "diplomacyDelta": -35,
+              "efficiencyDelta": -25,
+              "nextStepId": "step_fail",
+              "pedagogicalFeedback": "Attaque personnelle agressive. Rompt le dialogue et conduit à une sanction managériale."
+            },
+            {
+              "choiceId": "c2",
+              "text": "Je comprends la contrainte financière globale. Je vous propose d'arbitrer en priorisant le lot central et en différant les options secondaires.",
+              "englishTranslation": "I understand the financial constraint. I suggest prioritizing the core release and deferring secondary enhancements.",
+              "diplomacyDelta": 25,
+              "efficiencyDelta": 20,
+              "nextStepId": "step_2",
+              "pedagogicalFeedback": "Excellente posture constructive : validation de la contrainte et proposition d'un compromis opérationnel (lotissement)."
+            }
+          ]
+        },
+        {
+          "stepId": "step_2",
+          "characterSpeaker": "Alain (Directeur de Division)",
+          "characterRole": "Directeur de Division",
+          "dialoguePrompt": "C'est pragmatique. Mais que dit-on au client partenaire qui attendait le périmètre complet fin novembre ?",
+          "dialoguePromptEn": "That is pragmatic. But what do we tell the client who expected the full scope by end of November?",
+          "choices": [
+            {
+              "choiceId": "c3",
+              "text": "On ne lui dit rien pour le moment, on verra quand on sera en retard.",
+              "englishTranslation": "Let's not tell them anything for now; we'll see when we fall behind.",
+              "diplomacyDelta": -20,
+              "efficiencyDelta": -15,
+              "nextStepId": "step_fail",
+              "pedagogicalFeedback": "Manque de transparence : le client découvrira le retard trop tard, ruinant la réputation de l'entreprise."
+            },
+            {
+              "choiceId": "c4",
+              "text": "Je propose d'organiser un point de synchronisation transparent pour lui présenter la feuille de route ajustée et lui garantir la stabilité du lot 1.",
+              "englishTranslation": "I propose scheduling a transparent sync to present the adjusted roadmap and guarantee stability on release 1.",
+              "diplomacyDelta": 30,
+              "efficiencyDelta": 25,
+              "nextStepId": "step_success",
+              "pedagogicalFeedback": "Leadership remarquable : transparence proactive et réassurance orientée qualité."
+            }
+          ]
+        },
+        {
+          "stepId": "step_success",
+          "characterSpeaker": "Alain (Directeur de Division)",
+          "characterRole": "Directeur de Division",
+          "dialoguePrompt": "Parfait. C'est exactement le genre de management responsable que j'attends. Je valide votre plan d'arbitrage.",
+          "dialoguePromptEn": "Perfect. That is exactly the responsible management I expect. I approve your plan.",
+          "choices": [],
+          "isTerminal": true,
+          "terminalSummary": "Succès : Vous avez préservé la viabilité du projet tout en renforçant la confiance de votre direction."
+        },
+        {
+          "stepId": "step_fail",
+          "characterSpeaker": "Alain (Directeur de Division)",
+          "characterRole": "Directeur de Division",
+          "dialoguePrompt": "La discussion est rompue. Faute de proposition recevable, la direction suspend les investissements.",
+          "dialoguePromptEn": "Discussion broke down. Lacking workable proposals, management suspends the budget.",
+          "choices": [],
+          "isTerminal": true,
+          "terminalSummary": "Échec : Le manque de diplomatie ou de transparence a conduit au blocage du projet."
+        }
+      ]
+    }
+  ],
+  "emailTemplates": [
+    {
+      "id": "tpl_relance_devis",
+      "title": "Relance courtoise de proposition commerciale",
+      "titleEn": "Polite Sales Proposal Follow-Up",
+      "category": "CLIENT",
+      "formalityLevel": "FORMEL",
+      "subjectTemplate": "Suivi de notre proposition commerciale - [NOM_PROJET]",
+      "bodyTemplate": "Bonjour [TITRE_NOM],\n\nJe me permets de revenir vers vous suite à l'envoi de notre proposition commerciale concernant [NOM_PROJET], transmise le [DATE].\n\nAvez-vous eu l'opportunité d'en prendre connaissance ?\n\nJe reste à votre entière disposition pour convenir d'un échange téléphonique afin de répondre à vos éventuelles questions et adapter notre offre à vos priorités.\n\nDans l'attente de votre retour, je vous souhaite une excellente journée.\n\nBien cordialement,\n[MON_NOM]",
+      "placeholders": ["TITRE_NOM", "NOM_PROJET", "DATE", "MON_NOM"],
+      "tips": "Relancez 4 à 6 jours ouvrés après l'envoi initial. Proposez toujours un échange téléphonique rapide pour lever les doutes."
+    },
+    {
+      "id": "tpl_demande_arbitrage",
+      "title": "Demande d'arbitrage sur un jalon critique",
+      "titleEn": "Milestone Trade-off Escalation Email",
+      "category": "TECHNIQUE",
+      "formalityLevel": "DIPLOMATE",
+      "subjectTemplate": "[ARBITRAGE REQUIS] Impact sur le jalon de livraison [NOM_JALON]",
+      "bodyTemplate": "Bonjour [PRENOM_MANAGER],\n\nSuite aux récents imprévus techniques sur [NOM_LOT], nous constatons un risque de glissement de calendrier de [NB_JOURS] jours sur le jalon [NOM_JALON].\n\nAfin de sécuriser la date de mise en production, deux options s'offrent à nous :\n1. Option A : Différer le sous-module secondaire au sprint suivant tout en tenant la date initiale.\n2. Option B : Conserver le périmètre complet avec un décalage de livraison au [DATE_REPORTEE].\n\nNotre recommandation technique penche pour l'Option A. Pourriez-vous nous indiquer votre arbitrage d'ici [DATE_LIMITE] ?\n\nMerci pour ton retour,\n[MON_NOM]",
+      "placeholders": ["PRENOM_MANAGER", "NOM_LOT", "NB_JOURS", "NOM_JALON", "DATE_REPORTEE", "DATE_LIMITE", "MON_NOM"],
+      "tips": "Présentez toujours des alternatives chiffrées avec une recommandation claire avant de demander un arbitrage."
+    },
+    {
+      "id": "tpl_compte_rendu",
+      "title": "Compte rendu synthétique de réunion",
+      "titleEn": "Executive Meeting Minutes",
+      "category": "REUNION",
+      "formalityLevel": "AGILE",
+      "subjectTemplate": "Compte rendu synthétique - Point d'équipe du [DATE]",
+      "bodyTemplate": "Bonjour à tous,\n\nMerci pour votre participation active au point de ce matin. Voici les décisions clés et les prochaines étapes :\n\n📌 Décisions actées :\n- [DECISION_1]\n- [DECISION_2]\n\n🚀 Actions et livrables :\n- [ACTION_1] ➔ Responsable : [RESPONSABLE_1] (Échéance : [DATE_1])\n- [ACTION_2] ➔ Responsable : [RESPONSABLE_2] (Échéance : [DATE_2])\n\nProchain point d'étape prévu le [PROCHAIN_RDV].\n\nBonne continuation,\n[MON_NOM]",
+      "placeholders": ["DATE", "DECISION_1", "DECISION_2", "ACTION_1", "RESPONSABLE_1", "DATE_1", "ACTION_2", "RESPONSABLE_2", "DATE_2", "PROCHAIN_RDV", "MON_NOM"],
+      "tips": "Envoyez le compte rendu dans les 4 heures suivant la réunion pour maximiser l'engagement des parties prenantes."
+    }
+  ],
+  "survivalPhrases": [
+    {
+      "id": "sos_incomprehension",
+      "contextKey": "INCOMPREHENSION",
+      "situationLabel": "Je n'ai pas compris ce qui a été dit",
+      "situationLabelEn": "I did not understand what was just said",
+      "frenchPhrase": "Excusez-moi, pourriez-vous reformuler votre dernier point plus lentement ?",
+      "englishTranslation": "Excuse me, could you please rephrase your last point a bit slower?",
+      "recommendedSpeed": 0.85
+    },
+    {
+      "id": "sos_visio_micro",
+      "contextKey": "TECHNIQUE",
+      "situationLabel": "Problème audio ou micro en visio",
+      "situationLabelEn": "Audio or microphone glitch in remote meeting",
+      "frenchPhrase": "Pardonnez-moi, je rencontre un souci de micro. Je vous écris directement dans le chat.",
+      "englishTranslation": "Forgive me, I have a mic issue. I am typing directly in the meeting chat.",
+      "recommendedSpeed": 0.90
+    },
+    {
+      "id": "sos_temporisation",
+      "contextKey": "TEMPORISATION",
+      "situationLabel": "Gagner du temps pour réfléchir à une réponse",
+      "situationLabelEn": "Buying time to formulate an answer",
+      "frenchPhrase": "C'est une excellente question. Laissez-moi un court instant pour vérifier ce point précis.",
+      "englishTranslation": "That is an excellent question. Allow me a brief moment to verify that specific point.",
+      "recommendedSpeed": 0.85
+    },
+    {
+      "id": "sos_desaccord_poli",
+      "contextKey": "DESACCORD",
+      "situationLabel": "Exprimer un désaccord immédiat avec diplomatie",
+      "situationLabelEn": "Expressing immediate disagreement diplomatically",
+      "frenchPhrase": "Je comprends votre raisonnement, toutefois j'ai une réserve importante sur ce choix.",
+      "englishTranslation": "I understand your reasoning, however I have a significant reservation regarding this choice.",
+      "recommendedSpeed": 0.85
+    },
+    {
+      "id": "sos_depart_anticipe",
+      "contextKey": "DEPART",
+      "situationLabel": "Devoir quitter la réunion avant la fin",
+      "situationLabelEn": "Having to leave the meeting early",
+      "frenchPhrase": "Navré, un engagement imprévu m'oblige à vous quitter. Je lirai attentivement le compte rendu.",
+      "englishTranslation": "Apologies, an urgent commitment obliges me to drop off. I will review the minutes carefully.",
+      "recommendedSpeed": 0.90
     }
   ]
 }

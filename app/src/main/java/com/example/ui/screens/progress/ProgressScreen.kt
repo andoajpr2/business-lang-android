@@ -53,7 +53,7 @@ fun ProgressScreen(
     onBackClick: () -> Unit
 ) {
     val completedLessonIds by userDataRepository.getCompletedLessonIds().collectAsState(initial = emptyList())
-    val reviews by userDataRepository.getAllReviews().collectAsState(initial = emptyList())
+    val srsCards by userDataRepository.getAllSrsCards().collectAsState(initial = emptyList())
     val quizScores by userDataRepository.getAllQuizScores().collectAsState(initial = emptyList())
 
     val allLessons = pedagogyRepository.getPedagogyData().lessons
@@ -61,8 +61,8 @@ fun ProgressScreen(
 
     val totalLessons = allLessons.size
     val completedCount = completedLessonIds.size
-    val masteredExpressionsCount = reviews.count { it.masteryLevel >= 2 }
-    val reviewedTotal = reviews.size
+    val masteredExpressionsCount = srsCards.count { it.repetitions >= 2 || it.lastQualityGrade >= 2 }
+    val reviewedTotal = srsCards.size
 
     val quizPrecision = if (quizScores.isNotEmpty()) {
         val totalCorrect = quizScores.sumOf { it.score }

@@ -4,10 +4,14 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.data.local.entity.ExpressionReviewEntity
+import androidx.room.Update
 import com.example.data.local.entity.FavoriteEntity
 import com.example.data.local.entity.LessonProgressEntity
+import com.example.data.local.entity.PronunciationEvaluationEntity
 import com.example.data.local.entity.QuizScoreEntity
+import com.example.data.local.entity.SimulationHistoryEntity
+import com.example.data.local.entity.SrsCardEntity
+import com.example.data.local.entity.UserCompetencyEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -39,15 +43,6 @@ interface ProgressDao {
     @Query("DELETE FROM lesson_progress WHERE lessonId = :lessonId")
     suspend fun unmarkLessonCompleted(lessonId: String)
 
-    @Query("SELECT * FROM expression_reviews")
-    fun getAllReviews(): Flow<List<ExpressionReviewEntity>>
-
-    @Query("SELECT * FROM expression_reviews WHERE expressionId = :expressionId")
-    suspend fun getReviewForExpression(expressionId: String): ExpressionReviewEntity?
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveReview(review: ExpressionReviewEntity)
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun recordQuizScore(score: QuizScoreEntity)
 
@@ -57,9 +52,60 @@ interface ProgressDao {
     @Query("DELETE FROM lesson_progress")
     suspend fun clearAllLessonProgress()
 
-    @Query("DELETE FROM expression_reviews")
-    suspend fun clearAllReviews()
-
     @Query("DELETE FROM quiz_scores")
     suspend fun clearAllQuizScores()
+}
+
+@Dao
+interface SrsDao {
+    @Query("SELECT * FROM srs_cards")
+    fun getAllCards(): Flow<List<SrsCardEntity>>
+
+    @Query("SELECT * FROM srs_cards WHERE nextReviewTimestamp <= :nowTimestamp ORDER BY nextReviewTimestamp ASC")
+    fun getCardsDueForReview(nowTimestamp: Long = System.currentTimeMillis()): Flow<List<SrsCardEntity>>
+
+    @Query("SELECT * FROM srs_cards WHERE expressionId = :expressionId")
+    suspend fun getCardByExpressionId(expressionId: String): SrsCardEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveCard(card: SrsCardEntity)
+
+    @Query("DELETE FROM srs_cards")
+    suspend fun clearAllCards()
+}
+
+@Dao
+interface SimulationDao {
+    @Query("SELECT * FROM simulation_history ORDER BY completedAt DESC")
+    fun getAllSimulationHistory(): Flow<List<SimulationHistoryEntity>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun recordSimulation(history: SimulationHistoryEntity)
+
+    @Query("DELETE FROM simulation_history")
+    suspend fun clearAllSimulationHistory()
+}
+
+@Dao
+interface PronunciationDao {
+    @Query("SELECT * FROM pronunciation_evaluations ORDER BY testedAt DESC")
+    fun getAllEvaluations(): Flow<List<PronunciationEvaluationEntity>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun recordEvaluation(evaluation: PronunciationEvaluationEntity)
+
+    @Query("DELETE FROM pronunciation_evaluations")
+    suspend fun clearAllEvaluations()
+}
+
+@Dao
+interface CompetencyDao {
+    @Query("SELECT * FROM user_competency WHERE userId = :userId")
+    fun getCompetency(userId: String = "local_user"): Flow<UserCompetencyEntity?>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveCompetency(competency: UserCompetencyEntity)
+
+    @Query("DELETE FROM user_competency")
+    suspend fun clearCompetency()
 }

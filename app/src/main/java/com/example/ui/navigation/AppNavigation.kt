@@ -33,8 +33,13 @@ import com.example.data.model.ExerciseType
 import com.example.data.repository.PedagogyRepository
 import com.example.data.repository.PreferencesRepository
 import com.example.data.repository.UserDataRepository
+import com.example.ui.audio.SpeechToTextManager
 import com.example.ui.audio.TextToSpeechManager
+import com.example.ui.screens.competency.CompetencyRadarScreen
+import com.example.ui.screens.competency.CompetencyViewModel
 import com.example.ui.screens.dialogues.DialoguesScreen
+import com.example.ui.screens.emails.EmailBuilderScreen
+import com.example.ui.screens.emails.EmailBuilderViewModel
 import com.example.ui.screens.favorites.FavoritesScreen
 import com.example.ui.screens.flashcards.FlashcardsScreen
 import com.example.ui.screens.flashcards.FlashcardsViewModel
@@ -53,13 +58,16 @@ import com.example.ui.screens.search.SearchScreen
 import com.example.ui.screens.search.SearchViewModel
 import com.example.ui.screens.settings.SettingsScreen
 import com.example.ui.screens.settings.SettingsViewModel
+import com.example.ui.screens.simulation.SimulationScreen
+import com.example.ui.screens.simulation.SimulationViewModel
 
 @Composable
 fun AppNavigation(
     pedagogyRepository: PedagogyRepository,
     userDataRepository: UserDataRepository,
     preferencesRepository: PreferencesRepository,
-    ttsManager: TextToSpeechManager
+    ttsManager: TextToSpeechManager,
+    sttManager: SpeechToTextManager
 ) {
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -169,9 +177,18 @@ fun AppNavigation(
                 )
             }
 
-            // 3. Pratique
+            // 3. Pratique V2 Hub
             composable(Screen.Practice.route) {
                 PracticeScreen(
+                    onNavigateToSimulation = {
+                        navController.navigate(Screen.Simulation.createRoute())
+                    },
+                    onNavigateToEmailBuilder = {
+                        navController.navigate(Screen.EmailBuilder.route)
+                    },
+                    onNavigateToRadar = {
+                        navController.navigate(Screen.CompetencyRadar.route)
+                    },
                     onNavigateToFlashcards = {
                         navController.navigate(Screen.Flashcards.createRoute())
                     },
@@ -237,7 +254,7 @@ fun AppNavigation(
                 )
             }
 
-            // Flashcards (avec ou sans filtre leçon)
+            // Flashcards (avec SM-2)
             composable(
                 route = Screen.Flashcards.route,
                 arguments = listOf(navArgument("lessonId") {
@@ -330,6 +347,48 @@ fun AppNavigation(
                 }
                 SettingsScreen(
                     viewModel = settingsViewModel,
+                    onBackClick = { navController.popBackStack() }
+                )
+            }
+
+            // NOUVEAUTÉ V2 : Simulation & Jeu de rôle
+            composable(
+                route = Screen.Simulation.route,
+                arguments = listOf(navArgument("scenarioId") {
+                    type = NavType.StringType
+                    nullable = true
+                    defaultValue = null
+                })
+            ) { backStackEntry ->
+                val scenarioId = backStackEntry.arguments?.getString("scenarioId")
+                val simViewModel: SimulationViewModel = viewModel(key = "sim_$scenarioId") {
+                    SimulationViewModel(scenarioId, pedagogyRepository, userDataRepository, ttsManager, sttManager)
+                }
+                SimulationScreen(
+                    viewModel = simViewModel,
+                    onBackClick = { navController.popBackStack() }
+                )
+            }
+
+            // NOUVEAUTÉ V2 : Générateur d'emails
+            composable(Screen.EmailBuilder.route) {
+                val emailViewModel: EmailBuilderViewModel = viewModel {
+                    EmailBuilderViewModel(pedagogyRepository)
+                }
+                EmailBuilderScreen(
+                    viewModel = emailViewModel,
+                    ttsManager = ttsManager,
+                    onBackClick = { navController.popBackStack() }
+                )
+            }
+
+            // NOUVEAUTÉ V2 : Radar de compétences
+            composable(Screen.CompetencyRadar.route) {
+                val competencyViewModel: CompetencyViewModel = viewModel {
+                    CompetencyViewModel(userDataRepository)
+                }
+                CompetencyRadarScreen(
+                    viewModel = competencyViewModel,
                     onBackClick = { navController.popBackStack() }
                 )
             }

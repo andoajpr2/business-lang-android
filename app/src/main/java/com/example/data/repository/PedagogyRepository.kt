@@ -5,12 +5,18 @@ import com.example.data.model.Category
 import com.example.data.model.Dialogue
 import com.example.data.model.DialogueLine
 import com.example.data.model.DifficultyLevel
+import com.example.data.model.EmailFormality
+import com.example.data.model.EmailTemplate
 import com.example.data.model.Exercise
 import com.example.data.model.ExerciseType
 import com.example.data.model.Expression
 import com.example.data.model.Lesson
 import com.example.data.model.Module
 import com.example.data.model.PedagogyData
+import com.example.data.model.SimulationChoice
+import com.example.data.model.SimulationScenario
+import com.example.data.model.SimulationStep
+import com.example.data.model.SurvivalPhrase
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -33,7 +39,7 @@ class PedagogyRepository(private val context: Context) {
         val jsonString = try {
             val inputStream = context.assets.open("pedagogy_data.json")
             val reader = BufferedReader(InputStreamReader(inputStream))
-            val sb = java.lang.StringBuilder()
+            val sb = StringBuilder()
             var line: String?
             while (reader.readLine().also { line = it } != null) {
                 sb.append(line)
@@ -57,7 +63,9 @@ class PedagogyRepository(private val context: Context) {
                     Module(
                         id = item.optString("id"),
                         title = item.optString("title"),
+                        titleEn = item.optString("titleEn"),
                         description = item.optString("description"),
+                        descriptionEn = item.optString("descriptionEn"),
                         iconName = item.optString("iconName"),
                         level = item.optString("level")
                     )
@@ -76,7 +84,9 @@ class PedagogyRepository(private val context: Context) {
                         id = item.optString("id"),
                         moduleId = item.optString("moduleId"),
                         title = item.optString("title"),
+                        titleEn = item.optString("titleEn"),
                         contextSummary = item.optString("contextSummary"),
+                        contextSummaryEn = item.optString("contextSummaryEn"),
                         order = item.optInt("order", 1)
                     )
                 )
@@ -106,7 +116,9 @@ class PedagogyRepository(private val context: Context) {
                         id = item.optString("id"),
                         lessonId = item.optString("lessonId"),
                         frenchText = item.optString("frenchText"),
+                        englishTranslation = item.optString("englishTranslation"),
                         explanation = item.optString("explanation"),
+                        explanationEn = item.optString("explanationEn"),
                         exampleUsage = item.optString("exampleUsage"),
                         category = Category.fromString(item.optString("category")),
                         level = DifficultyLevel.fromString(item.optString("level")),
@@ -135,9 +147,11 @@ class PedagogyRepository(private val context: Context) {
                         lessonId = item.optString("lessonId"),
                         type = ExerciseType.fromString(item.optString("type")),
                         questionOrPrompt = item.optString("questionOrPrompt"),
+                        questionOrPromptEn = item.optString("questionOrPromptEn"),
                         options = optList,
                         correctAnswer = item.optString("correctAnswer"),
-                        explanation = item.optString("explanation")
+                        explanation = item.optString("explanation"),
+                        explanationEn = item.optString("explanationEn")
                     )
                 )
             }
@@ -159,6 +173,7 @@ class PedagogyRepository(private val context: Context) {
                                 speaker = lineItem.optString("speaker"),
                                 role = lineItem.optString("role"),
                                 frenchText = lineItem.optString("frenchText"),
+                                englishTranslation = lineItem.optString("englishTranslation"),
                                 notes = lineItem.optString("notes")
                             )
                         )
@@ -175,12 +190,122 @@ class PedagogyRepository(private val context: Context) {
             }
         }
 
+        // Parse Simulations V2
+        val simulationsList = mutableListOf<SimulationScenario>()
+        val simArray = jsonObject.optJSONArray("simulations")
+        if (simArray != null) {
+            for (i in 0 until simArray.length()) {
+                val simObj = simArray.getJSONObject(i)
+                val stepsList = mutableListOf<SimulationStep>()
+                val stepsArray = simObj.optJSONArray("steps")
+                if (stepsArray != null) {
+                    for (s in 0 until stepsArray.length()) {
+                        val stepObj = stepsArray.getJSONObject(s)
+                        val choicesList = mutableListOf<SimulationChoice>()
+                        val choicesArray = stepObj.optJSONArray("choices")
+                        if (choicesArray != null) {
+                            for (c in 0 until choicesArray.length()) {
+                                val choiceObj = choicesArray.getJSONObject(c)
+                                choicesList.add(
+                                    SimulationChoice(
+                                        choiceId = choiceObj.optString("choiceId"),
+                                        text = choiceObj.optString("text"),
+                                        englishTranslation = choiceObj.optString("englishTranslation"),
+                                        diplomacyDelta = choiceObj.optInt("diplomacyDelta", 0),
+                                        efficiencyDelta = choiceObj.optInt("efficiencyDelta", 0),
+                                        nextStepId = choiceObj.optString("nextStepId"),
+                                        pedagogicalFeedback = choiceObj.optString("pedagogicalFeedback")
+                                    )
+                                )
+                            }
+                        }
+                        stepsList.add(
+                            SimulationStep(
+                                stepId = stepObj.optString("stepId"),
+                                characterSpeaker = stepObj.optString("characterSpeaker"),
+                                characterRole = stepObj.optString("characterRole"),
+                                dialoguePrompt = stepObj.optString("dialoguePrompt"),
+                                dialoguePromptEn = stepObj.optString("dialoguePromptEn"),
+                                choices = choicesList,
+                                isTerminal = stepObj.optBoolean("isTerminal", false),
+                                terminalSummary = stepObj.optString("terminalSummary")
+                            )
+                        )
+                    }
+                }
+                simulationsList.add(
+                    SimulationScenario(
+                        id = simObj.optString("id"),
+                        title = simObj.optString("title"),
+                        titleEn = simObj.optString("titleEn"),
+                        context = simObj.optString("context"),
+                        contextEn = simObj.optString("contextEn"),
+                        category = Category.fromString(simObj.optString("category")),
+                        initialStepId = simObj.optString("initialStepId", "step_1"),
+                        steps = stepsList
+                    )
+                )
+            }
+        }
+
+        // Parse Email Templates V2
+        val emailTemplatesList = mutableListOf<EmailTemplate>()
+        val emailArray = jsonObject.optJSONArray("emailTemplates")
+        if (emailArray != null) {
+            for (i in 0 until emailArray.length()) {
+                val emailObj = emailArray.getJSONObject(i)
+                val placeholdersList = mutableListOf<String>()
+                val plArray = emailObj.optJSONArray("placeholders")
+                if (plArray != null) {
+                    for (p in 0 until plArray.length()) {
+                        placeholdersList.add(plArray.getString(p))
+                    }
+                }
+                emailTemplatesList.add(
+                    EmailTemplate(
+                        id = emailObj.optString("id"),
+                        title = emailObj.optString("title"),
+                        titleEn = emailObj.optString("titleEn"),
+                        category = Category.fromString(emailObj.optString("category")),
+                        formalityLevel = EmailFormality.fromString(emailObj.optString("formalityLevel")),
+                        subjectTemplate = emailObj.optString("subjectTemplate"),
+                        bodyTemplate = emailObj.optString("bodyTemplate"),
+                        placeholders = placeholdersList,
+                        tips = emailObj.optString("tips")
+                    )
+                )
+            }
+        }
+
+        // Parse Survival Phrases V2
+        val survivalList = mutableListOf<SurvivalPhrase>()
+        val survivalArray = jsonObject.optJSONArray("survivalPhrases")
+        if (survivalArray != null) {
+            for (i in 0 until survivalArray.length()) {
+                val survObj = survivalArray.getJSONObject(i)
+                survivalList.add(
+                    SurvivalPhrase(
+                        id = survObj.optString("id"),
+                        contextKey = survObj.optString("contextKey"),
+                        situationLabel = survObj.optString("situationLabel"),
+                        situationLabelEn = survObj.optString("situationLabelEn"),
+                        frenchPhrase = survObj.optString("frenchPhrase"),
+                        englishTranslation = survObj.optString("englishTranslation"),
+                        recommendedSpeed = survObj.optDouble("recommendedSpeed", 0.85).toFloat()
+                    )
+                )
+            }
+        }
+
         return PedagogyData(
             modules = modulesWithCount,
             lessons = lessonsList,
             expressions = expressionsList,
             exercises = exercisesList,
-            dialogues = dialoguesList
+            dialogues = dialoguesList,
+            simulations = simulationsList,
+            emailTemplates = emailTemplatesList,
+            survivalPhrases = survivalList
         )
     }
 
@@ -210,7 +335,9 @@ class PedagogyRepository(private val context: Context) {
                 id = "default",
                 lessonId = "",
                 frenchText = "Bonjour, auriez-vous un instant pour échanger ?",
+                englishTranslation = "Hello, would you have a moment to talk?",
                 explanation = "Formule de politesse professionnelle.",
+                explanationEn = "Professional polite formula.",
                 exampleUsage = "Bonjour, auriez-vous un instant pour échanger sur le dossier ?",
                 category = Category.BUREAU,
                 level = DifficultyLevel.DEBUTANT,
@@ -233,6 +360,7 @@ class PedagogyRepository(private val context: Context) {
             val matchesLevel = level == null || exp.level == level
             val matchesQuery = cleanQuery.isEmpty() ||
                 exp.frenchText.lowercase().contains(cleanQuery) ||
+                exp.englishTranslation.lowercase().contains(cleanQuery) ||
                 exp.explanation.lowercase().contains(cleanQuery) ||
                 exp.exampleUsage.lowercase().contains(cleanQuery) ||
                 exp.keywords.any { it.lowercase().contains(cleanQuery) }
@@ -260,4 +388,20 @@ class PedagogyRepository(private val context: Context) {
 
     fun getDialogueById(id: String): Dialogue? =
         getPedagogyData().dialogues.firstOrNull { it.id == id }
+
+    // Nouvelles méthodes V2
+    fun getAllSimulations(): List<SimulationScenario> = getPedagogyData().simulations
+
+    fun getSimulationById(id: String): SimulationScenario? =
+        getPedagogyData().simulations.firstOrNull { it.id == id }
+
+    fun getAllEmailTemplates(): List<EmailTemplate> = getPedagogyData().emailTemplates
+
+    fun getEmailTemplateById(id: String): EmailTemplate? =
+        getPedagogyData().emailTemplates.firstOrNull { it.id == id }
+
+    fun getAllSurvivalPhrases(): List<SurvivalPhrase> = getPedagogyData().survivalPhrases
+
+    fun getSurvivalPhrasesByContext(contextKey: String): List<SurvivalPhrase> =
+        getPedagogyData().survivalPhrases.filter { it.contextKey.equals(contextKey, ignoreCase = true) }
 }

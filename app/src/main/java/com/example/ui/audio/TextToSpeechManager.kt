@@ -21,6 +21,7 @@ class TextToSpeechManager(context: Context) : TextToSpeech.OnInitListener {
     val isSpeaking: StateFlow<Boolean> = _isSpeaking.asStateFlow()
 
     private var currentRate: Float = 1.0f
+    private var currentLocale: Locale = Locale.FRENCH
 
     init {
         try {
@@ -32,11 +33,7 @@ class TextToSpeechManager(context: Context) : TextToSpeech.OnInitListener {
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            val result = tts?.setLanguage(Locale.FRENCH)
-            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                // Essayer Locale.FRANCE ou fallback général
-                tts?.setLanguage(Locale.FRANCE)
-            }
+            applyLocale(currentLocale)
             tts?.setSpeechRate(currentRate)
             tts?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
                 override fun onStart(utteranceId: String?) {
@@ -72,7 +69,25 @@ class TextToSpeechManager(context: Context) : TextToSpeech.OnInitListener {
         }
     }
 
-    fun speak(text: String, utteranceId: String = text.hashCode().toString()) {
+    private fun applyLocale(locale: Locale) {
+        val result = tts?.setLanguage(locale)
+        if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+            if (locale == Locale.FRENCH) {
+                tts?.setLanguage(Locale.FRANCE)
+            } else if (locale == Locale.ENGLISH) {
+                tts?.setLanguage(Locale.US)
+            }
+        }
+    }
+
+    fun setLanguage(locale: Locale) {
+        currentLocale = locale
+        if (isInitialized) {
+            applyLocale(locale)
+        }
+    }
+
+    fun speak(text: String, utteranceId: String = text.hashCode().toString(), locale: Locale? = null) {
         if (!isInitialized || tts == null) {
             return
         }
@@ -81,6 +96,7 @@ class TextToSpeechManager(context: Context) : TextToSpeech.OnInitListener {
             return
         }
         stop()
+        locale?.let { applyLocale(it) } ?: applyLocale(currentLocale)
         tts?.setSpeechRate(currentRate)
         tts?.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId)
     }

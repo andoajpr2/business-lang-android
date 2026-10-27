@@ -18,11 +18,14 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AutoGraph
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Forum
+import androidx.compose.material.icons.filled.MarkEmailRead
 import androidx.compose.material.icons.filled.Psychology
 import androidx.compose.material.icons.filled.Quiz
+import androidx.compose.material.icons.filled.SportsKabaddi
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -40,6 +43,9 @@ import com.example.ui.components.AppTopBar
 
 @Composable
 fun PracticeScreen(
+    onNavigateToSimulation: () -> Unit,
+    onNavigateToEmailBuilder: () -> Unit,
+    onNavigateToRadar: () -> Unit,
     onNavigateToFlashcards: () -> Unit,
     onNavigateToQuiz: () -> Unit,
     onNavigateToFillBlanks: () -> Unit,
@@ -50,7 +56,7 @@ fun PracticeScreen(
             .fillMaxSize()
             .testTag("practice_screen")
     ) {
-        AppTopBar(title = "Entraînement & Ancrage")
+        AppTopBar(title = "Entraînement & Ancrage V2")
 
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
@@ -59,24 +65,62 @@ fun PracticeScreen(
         ) {
             item {
                 Text(
-                    text = "Multipliez les exercices pour transformer vos connaissances passives en réflexes spontanés au travail.",
+                    text = "Pratiquez en situations réelles : simulations décisionnelles, rédaction d'emails, prononciation et radar de compétences.",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Spacer(modifier = Modifier.height(4.dp))
             }
 
+            // NOUVEAUTÉ V2 : Simulation
+            item {
+                PracticeCategoryCard(
+                    title = "Jeu de Rôle : Simulation de Réunion",
+                    description = "Affrontez des situations sous tension, parlez au micro et suivez vos jauges de diplomatie.",
+                    badge = "Immersion & Voix (V2)",
+                    icon = Icons.Default.SportsKabaddi,
+                    onClick = onNavigateToSimulation,
+                    tag = "practice_simulation_card"
+                )
+            }
+
+            // NOUVEAUTÉ V2 : Générateur d'emails
+            item {
+                PracticeCategoryCard(
+                    title = "Générateur d'Emails Pro",
+                    description = "Rédigez des emails percutants (relance devis, arbitrage, excuses) prêts à copier.",
+                    badge = "Écrit Professionnel (V2)",
+                    icon = Icons.Default.MarkEmailRead,
+                    onClick = onNavigateToEmailBuilder,
+                    tag = "practice_email_builder_card"
+                )
+            }
+
+            // NOUVEAUTÉ V2 : Radar de compétences
+            item {
+                PracticeCategoryCard(
+                    title = "Radar de Compétences",
+                    description = "Visualisez votre profil sur 4 axes : Écoute, Oral, Vocabulaire technique et Diplomatie.",
+                    badge = "Analyse & Graphique (V2)",
+                    icon = Icons.Default.AutoGraph,
+                    onClick = onNavigateToRadar,
+                    tag = "practice_radar_card"
+                )
+            }
+
+            // Flashcards SRS SM-2
             item {
                 PracticeCategoryCard(
                     title = "Flashcards & Répétition Espacée",
-                    description = "Mémorisez le vocabulaire clé grâce au système de révision adaptative (SRS).",
-                    badge = "Mémorisation",
+                    description = "Mémorisez le vocabulaire avec l'algorithme SuperMemo SM-2 optimisé.",
+                    badge = "Mémorisation SM-2",
                     icon = Icons.Default.Psychology,
                     onClick = onNavigateToFlashcards,
                     tag = "practice_flashcards_card"
                 )
             }
 
+            // Quiz QCM
             item {
                 PracticeCategoryCard(
                     title = "Quiz QCM Professionnel",
@@ -88,6 +132,7 @@ fun PracticeScreen(
                 )
             }
 
+            // Exercices à trous
             item {
                 PracticeCategoryCard(
                     title = "Exercices à trous",
@@ -99,6 +144,7 @@ fun PracticeScreen(
                 )
             }
 
+            // Dialogues
             item {
                 PracticeCategoryCard(
                     title = "Dialogues de Bureau & Réunion",
