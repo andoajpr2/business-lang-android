@@ -1,5 +1,8 @@
 {
-  "supportedLanguages": ["fr", "en"],
+  "supportedLanguages": [
+    "fr",
+    "en"
+  ],
   "modules": [
     {
       "id": "mod_bureau_projet",
@@ -123,7 +126,12 @@
       "exampleUsage": "Bonjour Thomas, aurais-tu un instant pour qu'on fasse un point rapide sur le dossier Dupont ?",
       "category": "BUREAU",
       "level": "DEBUTANT",
-      "keywords": ["point rapide", "collègue", "disponibilité", "demande"]
+      "keywords": [
+        "point rapide",
+        "collègue",
+        "disponibilité",
+        "demande"
+      ]
     },
     {
       "id": "exp_02",
@@ -135,7 +143,11 @@
       "exampleUsage": "J'ai bien reçu les maquettes corrigées. Je te remercie chaleureusement pour ta réactivité sur ce dossier.",
       "category": "BUREAU",
       "level": "DEBUTANT",
-      "keywords": ["remerciement", "réactivité", "collaboration"]
+      "keywords": [
+        "remerciement",
+        "réactivité",
+        "collaboration"
+      ]
     },
     {
       "id": "exp_03",
@@ -147,7 +159,11 @@
       "exampleUsage": "Sur la partie migration de données, pourrais-tu préciser ta pensée ? Je ne suis pas certain de bien saisir.",
       "category": "BUREAU",
       "level": "INTERMEDIAIRE",
-      "keywords": ["clarification", "compréhension", "reformulation"]
+      "keywords": [
+        "clarification",
+        "compréhension",
+        "reformulation"
+      ]
     },
     {
       "id": "exp_04",
@@ -159,7 +175,11 @@
       "exampleUsage": "Navré pour ce contretemps sur le serveur de pré-production, nous mettons tout en œuvre pour rétablir la situation.",
       "category": "BUREAU",
       "level": "INTERMEDIAIRE",
-      "keywords": ["excuses", "contretemps", "prise en charge"]
+      "keywords": [
+        "excuses",
+        "contretemps",
+        "prise en charge"
+      ]
     },
     {
       "id": "exp_05",
@@ -171,7 +191,12 @@
       "exampleUsage": "Face aux retards de validation, nous devons faire un arbitrage rapide pour ne pas décaler le jalon de livraison.",
       "category": "TECHNIQUE",
       "level": "INTERMEDIAIRE",
-      "keywords": ["arbitrage", "jalon", "livraison", "projet"]
+      "keywords": [
+        "arbitrage",
+        "jalon",
+        "livraison",
+        "projet"
+      ]
     },
     {
       "id": "exp_06",
@@ -183,7 +208,12 @@
       "exampleUsage": "La validation des maquettes Figma par le client est bloquante pour la suite des développements.",
       "category": "TECHNIQUE",
       "level": "DEBUTANT",
-      "keywords": ["bloquant", "dépendance", "livrable", "développement"]
+      "keywords": [
+        "bloquant",
+        "dépendance",
+        "livrable",
+        "développement"
+      ]
     },
     {
       "id": "exp_07",
@@ -195,7 +225,12 @@
       "exampleUsage": "Avant de lancer le sprint, pouvons-nous définir ensemble les critères d'acceptation du ticket d'authentification ?",
       "category": "TECHNIQUE",
       "level": "INTERMEDIAIRE",
-      "keywords": ["critères d'acceptation", "sprint", "agilité", "qualité"]
+      "keywords": [
+        "critères d'acceptation",
+        "sprint",
+        "agilité",
+        "qualité"
+      ]
     },
     {
       "id": "exp_08",
@@ -207,7 +242,12 @@
       "exampleUsage": "Au niveau du lot 2, nous constatons un glissement de calendrier de trois jours dû à des imprévus techniques.",
       "category": "TECHNIQUE",
       "level": "AVANCE",
-      "keywords": ["glissement", "calendrier", "délai", "imprévu"]
+      "keywords": [
+        "glissement",
+        "calendrier",
+        "délai",
+        "imprévu"
+      ]
     },
     {
       "id": "exp_09",
@@ -219,7 +259,12 @@
       "exampleUsage": "Pour garantir la pérennité du système, il est préférable d'adresser cette dette technique avant la mise en production.",
       "category": "TECHNIQUE",
       "level": "AVANCE",
-      "keywords": ["dette technique", "mise en production", "qualité", "code"]
+      "keywords": [
+        "dette technique",
+        "mise en production",
+        "qualité",
+        "code"
+      ]
     },
     {
       "id": "exp_10",
@@ -231,7 +276,12 @@
       "exampleUsage": "Bonjour Madame Mercier, je me permets de revenir vers vous concernant notre échange téléphonique de ce matin.",
       "category": "EMAIL",
       "level": "DEBUTANT",
-      "keywords": ["revenir vers", "suivi", "email", "relance"]
+      "keywords": [
+        "revenir vers",
+        "suivi",
+        "email",
+        "relance"
+      ]
     },
     {
       "id": "exp_11",
@@ -243,7 +293,12 @@
       "exampleUsage": "Veuillez trouver ci-joint le compte rendu d'activité du mois d'octobre pour validation de votre part.",
       "category": "EMAIL",
       "level": "DEBUTANT",
-      "keywords": ["ci-joint", "compte rendu", "validation", "email"]
+      "keywords": [
+        "ci-joint",
+        "compte rendu",
+        "validation",
+        "email"
+      ]
     },
     {
       "id": "exp_12",
@@ -255,7 +310,12 @@
       "exampleUsage": "Afin de ne pas bloquer le déploiement, sans retour de votre part d'ici jeudi, nous reconduirons le paramétrage par défaut.",
       "category": "EMAIL",
       "level": "INTERMEDIAIRE",
-      "keywords": ["échéance", "délai", "retour", "relance"]
+      "keywords": [
+        "échéance",
+        "délai",
+        "retour",
+        "relance"
+      ]
     },
     {
       "id": "exp_13",
@@ -267,7 +327,12 @@
       "exampleUsage": "En espérant que cette synthèse réponde à vos attentes, je reste à votre entière disposition pour tout complément d'information.",
       "category": "EMAIL",
       "level": "DEBUTANT",
-      "keywords": ["disposition", "complément", "conclusion", "politesse"]
+      "keywords": [
+        "disposition",
+        "complément",
+        "conclusion",
+        "politesse"
+      ]
     },
     {
       "id": "exp_14",
@@ -279,7 +344,11 @@
       "exampleUsage": "Voici la dernière version du protocole d'accord. Pourriez-vous m'accuser bonne réception de ce document ?",
       "category": "EMAIL",
       "level": "INTERMEDIAIRE",
-      "keywords": ["accuser réception", "confirmation", "pièce jointe"]
+      "keywords": [
+        "accuser réception",
+        "confirmation",
+        "pièce jointe"
+      ]
     },
     {
       "id": "exp_15",
@@ -291,7 +360,11 @@
       "exampleUsage": "Bienvenue à tous. Je vous propose que nous fassions un rapide tour de table avant d'entamer l'ordre du jour.",
       "category": "REUNION",
       "level": "INTERMEDIAIRE",
-      "keywords": ["tour de table", "démarrage", "ordre du jour"]
+      "keywords": [
+        "tour de table",
+        "démarrage",
+        "ordre du jour"
+      ]
     },
     {
       "id": "exp_16",
@@ -303,7 +376,12 @@
       "exampleUsage": "L'objectif principal de ce point est d'aligner nos priorités pour le prochain trimestre et d'identifier les ressources manquantes.",
       "category": "REUNION",
       "level": "INTERMEDIAIRE",
-      "keywords": ["objectif", "alignement", "priorités", "cadrage"]
+      "keywords": [
+        "objectif",
+        "alignement",
+        "priorités",
+        "cadrage"
+      ]
     },
     {
       "id": "exp_17",
@@ -315,7 +393,12 @@
       "exampleUsage": "Merci d'être ponctuels. Nous avons convenu de 45 minutes, je serai garant du respect du timing pour que chacun puisse enchaîner.",
       "category": "REUNION",
       "level": "INTERMEDIAIRE",
-      "keywords": ["timing", "durée", "animation", "ponctualité"]
+      "keywords": [
+        "timing",
+        "durée",
+        "animation",
+        "ponctualité"
+      ]
     },
     {
       "id": "exp_18",
@@ -327,7 +410,11 @@
       "exampleUsage": "Puisque plusieurs collègues sont en déplacement, si personne n'y voit d'inconvénient, je propose d'enregistrer la séance pour les absents.",
       "category": "REUNION",
       "level": "INTERMEDIAIRE",
-      "keywords": ["enregistrement", "visio", "consentement"]
+      "keywords": [
+        "enregistrement",
+        "visio",
+        "consentement"
+      ]
     },
     {
       "id": "exp_19",
@@ -339,7 +426,12 @@
       "exampleUsage": "Je partage entièrement cette approche sur l'automatisation des tests, cela nous permettra de sécuriser les jalons.",
       "category": "REUNION",
       "level": "DEBUTANT",
-      "keywords": ["accord", "approbation", "adhésion", "sécurisation"]
+      "keywords": [
+        "accord",
+        "approbation",
+        "adhésion",
+        "sécurisation"
+      ]
     },
     {
       "id": "exp_20",
@@ -351,7 +443,12 @@
       "exampleUsage": "Je rejoins votre point de vue sur le principe, mais nous devons mesurer l'impact budgétaire avant de contractualiser.",
       "category": "REUNION",
       "level": "AVANCE",
-      "keywords": ["objection", "nuance", "budget", "diplomatie"]
+      "keywords": [
+        "objection",
+        "nuance",
+        "budget",
+        "diplomatie"
+      ]
     },
     {
       "id": "exp_21",
@@ -363,7 +460,11 @@
       "exampleUsage": "Puis-je me permettre une précision à ce stade de la discussion concernant l'architecture réseau ?",
       "category": "REUNION",
       "level": "INTERMEDIAIRE",
-      "keywords": ["prise de parole", "politesse", "interruption"]
+      "keywords": [
+        "prise de parole",
+        "politesse",
+        "interruption"
+      ]
     },
     {
       "id": "exp_22",
@@ -375,7 +476,12 @@
       "exampleUsage": "C'est une excellente remarque, mais pour éviter de nous disperser, je propose de traiter ce point connexe en aparté après la réunion.",
       "category": "REUNION",
       "level": "AVANCE",
-      "keywords": ["recadrage", "aparté", "ordre du jour", "efficacité"]
+      "keywords": [
+        "recadrage",
+        "aparté",
+        "ordre du jour",
+        "efficacité"
+      ]
     },
     {
       "id": "exp_23",
@@ -387,7 +493,12 @@
       "exampleUsage": "Bonjour Monsieur Laroche, ravi de vous rencontrer. Comment puis-je vous accompagner dans votre démarche aujourd'hui ?",
       "category": "CLIENT",
       "level": "DEBUTANT",
-      "keywords": ["accueil", "écoute", "accompagnement", "client"]
+      "keywords": [
+        "accueil",
+        "écoute",
+        "accompagnement",
+        "client"
+      ]
     },
     {
       "id": "exp_24",
@@ -399,7 +510,12 @@
       "exampleUsage": "Pour être certain de bien cerner vos attentes, quels sont vos critères déterminants en termes d'évolutivité et de support ?",
       "category": "CLIENT",
       "level": "INTERMEDIAIRE",
-      "keywords": ["attentes", "critères", "qualification", "écoute active"]
+      "keywords": [
+        "attentes",
+        "critères",
+        "qualification",
+        "écoute active"
+      ]
     },
     {
       "id": "exp_25",
@@ -411,7 +527,12 @@
       "exampleUsage": "Si je résume votre besoin, vous recherchez avant tout une solution clé en main capable de s'intégrer à votre SI actuel.",
       "category": "CLIENT",
       "level": "INTERMEDIAIRE",
-      "keywords": ["reformulation", "clé en main", "validation", "client"]
+      "keywords": [
+        "reformulation",
+        "clé en main",
+        "validation",
+        "client"
+      ]
     },
     {
       "id": "exp_26",
@@ -423,7 +544,12 @@
       "exampleUsage": "Vous pouvez avoir l'esprit tranquille : cette solution a fait ses preuves auprès d'acteurs ayant des volumétries similaires.",
       "category": "CLIENT",
       "level": "AVANCE",
-      "keywords": ["réassurance", "expérience", "preuve", "crédibilité"]
+      "keywords": [
+        "réassurance",
+        "expérience",
+        "preuve",
+        "crédibilité"
+      ]
     },
     {
       "id": "exp_27",
@@ -435,7 +561,12 @@
       "exampleUsage": "Nous comprenons parfaitement votre agacement suite à cette interruption de service et nous prenons votre demande très au sérieux.",
       "category": "CLIENT",
       "level": "INTERMEDIAIRE",
-      "keywords": ["réclamation", "empathie", "écoute", "gestion de crise"]
+      "keywords": [
+        "réclamation",
+        "empathie",
+        "écoute",
+        "gestion de crise"
+      ]
     },
     {
       "id": "exp_28",
@@ -447,7 +578,12 @@
       "exampleUsage": "Sans attendre, voici le plan d'action immédiat que nous mettons en place pour résoudre cette anomalie d'affichage.",
       "category": "CLIENT",
       "level": "INTERMEDIAIRE",
-      "keywords": ["plan d'action", "résolution", "anomalie", "support"]
+      "keywords": [
+        "plan d'action",
+        "résolution",
+        "anomalie",
+        "support"
+      ]
     },
     {
       "id": "exp_29",
@@ -459,7 +595,12 @@
       "exampleUsage": "Pour compenser le délai de livraison, à titre de geste commercial, nous vous proposons d'intégrer ce module sans surcoût.",
       "category": "CLIENT",
       "level": "AVANCE",
-      "keywords": ["geste commercial", "compensation", "fidélisation", "négociation"]
+      "keywords": [
+        "geste commercial",
+        "compensation",
+        "fidélisation",
+        "négociation"
+      ]
     },
     {
       "id": "exp_30",
@@ -471,7 +612,12 @@
       "exampleUsage": "Pouvons-nous convenir d'un rendez-vous vendredi pour faire le bilan de ces ajustements et vérifier que tout fonctionne à 100% ?",
       "category": "CLIENT",
       "level": "INTERMEDIAIRE",
-      "keywords": ["suivi", "rendez-vous", "bilan", "satisfaction"]
+      "keywords": [
+        "suivi",
+        "rendez-vous",
+        "bilan",
+        "satisfaction"
+      ]
     },
     {
       "id": "exp_31",
@@ -483,7 +629,12 @@
       "exampleUsage": "Bonjour, je suis Thomas de la société Novatech. Pourriez-vous me mettre en relation avec la personne en charge du projet ?",
       "category": "APPEL",
       "level": "DEBUTANT",
-      "keywords": ["mise en relation", "standard", "appel", "projet"]
+      "keywords": [
+        "mise en relation",
+        "standard",
+        "appel",
+        "projet"
+      ]
     },
     {
       "id": "exp_32",
@@ -495,7 +646,12 @@
       "exampleUsage": "Madame Laurent est en ligne pour le moment, préférez-vous patienter ou lui laisser un message sur sa boîte vocale ?",
       "category": "APPEL",
       "level": "INTERMEDIAIRE",
-      "keywords": ["patienter", "message", "ligne occupée", "téléphone"]
+      "keywords": [
+        "patienter",
+        "message",
+        "ligne occupée",
+        "téléphone"
+      ]
     },
     {
       "id": "exp_33",
@@ -507,7 +663,12 @@
       "exampleUsage": "Excusez-moi, il y a un écho important sur la ligne. Je vous entends très mal, pourriez-vous désactiver votre haut-parleur ?",
       "category": "APPEL",
       "level": "DEBUTANT",
-      "keywords": ["visio", "audio", "écho", "technique"]
+      "keywords": [
+        "visio",
+        "audio",
+        "écho",
+        "technique"
+      ]
     },
     {
       "id": "exp_34",
@@ -519,7 +680,11 @@
       "exampleUsage": "C'est bien noté, monsieur Bernard. Je lui transmets votre message dès la fin de sa réunion à 15 heures.",
       "category": "APPEL",
       "level": "DEBUTANT",
-      "keywords": ["prise de message", "engagement", "transmission"]
+      "keywords": [
+        "prise de message",
+        "engagement",
+        "transmission"
+      ]
     },
     {
       "id": "exp_35",
@@ -531,7 +696,11 @@
       "exampleUsage": "Ne t'inquiète pas, je te tiens informé dès que j'ai du nouveau de la part de la direction concernant le budget.",
       "category": "BUREAU",
       "level": "DEBUTANT",
-      "keywords": ["information", "suivi", "mise à jour"]
+      "keywords": [
+        "information",
+        "suivi",
+        "mise à jour"
+      ]
     },
     {
       "id": "exp_36",
@@ -543,7 +712,12 @@
       "exampleUsage": "Bonjour Monsieur, en réponse à votre sollicitation, voici un récapitulatif détaillé de nos engagements et délais de réalisation.",
       "category": "EMAIL",
       "level": "INTERMEDIAIRE",
-      "keywords": ["sollicitation", "engagements", "devis", "prospect"]
+      "keywords": [
+        "sollicitation",
+        "engagements",
+        "devis",
+        "prospect"
+      ]
     }
   ],
   "exercises": [
@@ -665,7 +839,12 @@
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Nous devons faire un ___ rapide pour ne pas décaler le jalon de livraison.",
       "questionOrPromptEn": "We need to make a quick ___ to avoid delaying the delivery milestone.",
-      "options": ["arbitrage", "reproche", "oubli", "retard"],
+      "options": [
+        "arbitrage",
+        "reproche",
+        "oubli",
+        "retard"
+      ],
       "correctAnswer": "arbitrage",
       "explanation": "L'arbitrage est la décision hiérarchique ou technique qui tranche entre plusieurs priorités.",
       "explanationEn": "Trade-off / decision making priority between options."
@@ -676,7 +855,12 @@
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Je me permets de ___ vers vous concernant notre échange téléphonique de ce matin.",
       "questionOrPromptEn": "I take the liberty to ___ to you regarding our phone call this morning.",
-      "options": ["revenir", "plaindre", "courir", "douter"],
+      "options": [
+        "revenir",
+        "plaindre",
+        "courir",
+        "douter"
+      ],
       "correctAnswer": "revenir",
       "explanation": "L'expression 'revenir vers vous' est la formule consacrée pour recontacter un interlocuteur.",
       "explanationEn": "'Revenir vers vous' is the idiomatic phrase for following up."
@@ -687,7 +871,12 @@
       "type": "FILL_BLANKS",
       "questionOrPrompt": "À titre de geste ___, nous vous proposons d'intégrer cette fonctionnalité sans surcoût.",
       "questionOrPromptEn": "As a ___ gesture, we offer to include this feature at no extra cost.",
-      "options": ["commercial", "gratuit", "amical", "secret"],
+      "options": [
+        "commercial",
+        "gratuit",
+        "amical",
+        "secret"
+      ],
       "correctAnswer": "commercial",
       "explanation": "Un 'geste commercial' est une concession consentie à un client pour fidéliser la relation.",
       "explanationEn": "A 'geste commercial' is a goodwill concession offered to nurture client relationships."
@@ -698,7 +887,12 @@
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Je vous propose que nous fassions un rapide tour de ___ avant d'aborder l'ordre du jour.",
       "questionOrPromptEn": "I propose we do a quick round of the ___ before discussing the agenda.",
-      "options": ["table", "bureau", "ville", "carte"],
+      "options": [
+        "table",
+        "bureau",
+        "ville",
+        "carte"
+      ],
       "correctAnswer": "table",
       "explanation": "Un 'tour de table' désigne l'expression successive de chacun des participants en début de réunion.",
       "explanationEn": "A 'tour de table' is a round-table check-in at the start of a meeting."
@@ -709,7 +903,12 @@
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Pourrais-tu préciser ta ___ ? Je ne suis pas certain de bien saisir les enjeux.",
       "questionOrPromptEn": "Could you clarify your ___? I am not sure I grasp the issues.",
-      "options": ["pensée", "colère", "force", "famille"],
+      "options": [
+        "pensée",
+        "colère",
+        "force",
+        "famille"
+      ],
       "correctAnswer": "pensée",
       "explanation": "'Préciser sa pensée' est une tournure polie pour demander plus de détails sans juger.",
       "explanationEn": "'Préciser sa pensée' is polite phrasing to ask for elaboration non-judgmentally."
@@ -720,7 +919,12 @@
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Si je résume votre besoin, vous recherchez une solution clé en ___.",
       "questionOrPromptEn": "If I summarize your need, you are looking for a key in ___ solution.",
-      "options": ["main", "or", "poche", "tête"],
+      "options": [
+        "main",
+        "or",
+        "poche",
+        "tête"
+      ],
       "correctAnswer": "main",
       "explanation": "Une solution 'clé en main' désigne une solution immédiatement opérationnelle et complète.",
       "explanationEn": "'Clé en main' translates to turnkey / ready-to-use."
@@ -731,7 +935,12 @@
       "type": "FILL_BLANKS",
       "questionOrPrompt": "Madame Martin est occupée, préférez-vous ___ ou lui laisser un message ?",
       "questionOrPromptEn": "Mrs. Martin is busy, would you prefer to ___ or leave a message?",
-      "options": ["patienter", "raccrocher", "crier", "partir"],
+      "options": [
+        "patienter",
+        "raccrocher",
+        "crier",
+        "partir"
+      ],
       "correctAnswer": "patienter",
       "explanation": "'Patienter' est le verbe adéquat pour inviter courtoisement un correspondant à attendre en ligne.",
       "explanationEn": "'Patienter' is the polite verb for holding on the phone."
@@ -915,6 +1124,292 @@
           "terminalSummary": "Échec : Le manque de diplomatie ou de transparence a conduit au blocage du projet."
         }
       ]
+    },
+    {
+      "id": "sim_entretien_evaluation",
+      "title": "Entretien d'évaluation annuelle : défendre sa promotion",
+      "titleEn": "Annual Review: Negotiating Your Promotion",
+      "context": "Votre manager vous annonce une note « conforme aux attentes » alors que vous avez dépassé vos objectifs. Vous souhaitez négocier une promotion sans braquer votre hiérarchie.",
+      "contextEn": "Your manager gives you a 'meets expectations' rating despite overachieving your goals. You want to negotiate a promotion without antagonizing your hierarchy.",
+      "category": "BUREAU",
+      "initialStepId": "step_1",
+      "steps": [
+        {
+          "stepId": "step_1",
+          "characterSpeaker": "Sophie (Manager)",
+          "characterRole": "Responsable hiérarchique",
+          "dialoguePrompt": "Votre évaluation annuelle est « conforme aux attentes ». Le dossier de promotion sera réexaminé l'an prochain.",
+          "dialoguePromptEn": "Your annual review is 'meets expectations'. The promotion file will be reviewed next year.",
+          "choices": [
+            {
+              "choiceId": "c1",
+              "text": "C'est inadmissible ! Je menace de démissionner si je ne suis pas promu cette année.",
+              "englishTranslation": "That's unacceptable! I threaten to resign if I'm not promoted this year.",
+              "diplomacyDelta": -35,
+              "efficiencyDelta": -20,
+              "nextStepId": "step_fail",
+              "pedagogicalFeedback": "L'ultimatum ferme la négociation : les menaces de démission sont perçues comme du chantage et dégradent durablement la relation."
+            },
+            {
+              "choiceId": "c2",
+              "text": "Je prends acte de cette évaluation. Puis-je vous partager trois résultats concrets qui, me semble-t-il, dépassent largement mes objectifs ?",
+              "englishTranslation": "I acknowledge this rating. May I share three concrete results that, I believe, go well beyond my objectives?",
+              "diplomacyDelta": 25,
+              "efficiencyDelta": 15,
+              "nextStepId": "step_2",
+              "pedagogicalFeedback": "Posture exemplaire : vous validez sans agresser, puis vous recentrez la discussion sur des faits mesurables."
+            },
+            {
+              "choiceId": "c3",
+              "text": "Bon, tant pis, je ferai mieux l'année prochaine.",
+              "englishTranslation": "Alright, too bad, I'll do better next year.",
+              "diplomacyDelta": 5,
+              "efficiencyDelta": -25,
+              "nextStepId": "step_passive",
+              "pedagogicalFeedback": "Éviter le débat protège la relation mais renonce à faire valoir vos droits : l'efficacité managériale exige de savoir négocier."
+            }
+          ],
+          "isTerminal": false,
+          "terminalSummary": ""
+        },
+        {
+          "stepId": "step_2",
+          "characterSpeaker": "Sophie (Manager)",
+          "characterRole": "Responsable hiérarchique",
+          "dialoguePrompt": "Je vous écoute, mais les budgets d'augmentation sont gelés au niveau direction. Que proposez-vous concrètement ?",
+          "dialoguePromptEn": "I'm listening, but raise budgets are frozen at executive level. What exactly are you proposing?",
+          "choices": [
+            {
+              "choiceId": "c4",
+              "text": "Rien. Si c'est gelé, il n'y a rien à discuter.",
+              "englishTranslation": "Nothing. If it's frozen, there's nothing to discuss.",
+              "diplomacyDelta": 0,
+              "efficiencyDelta": -30,
+              "nextStepId": "step_fail",
+              "pedagogicalFeedback": "Renoncer dès le premier obstacle revient à laisser la décision se faire sans vous. Un bon négociateur explore toujours les alternatives."
+            },
+            {
+              "choiceId": "c5",
+              "text": "À défaut d'augmentation immédiate, pouvons-nous formaliser un plan de montée en grade avec des critères atteignables d'ici six mois ?",
+              "englishTranslation": "Absent an immediate raise, can we formalize a promotion plan with achievable criteria within six months?",
+              "diplomacyDelta": 25,
+              "efficiencyDelta": 30,
+              "nextStepId": "step_success",
+              "pedagogicalFeedback": "Excellent réflexe : transformer un blocage budgétaire en engagement écrit et vérifiable, c'est de la négociation constructive."
+            }
+          ],
+          "isTerminal": false,
+          "terminalSummary": ""
+        },
+        {
+          "stepId": "step_success",
+          "characterSpeaker": "Sophie (Manager)",
+          "characterRole": "Responsable hiérarchique",
+          "dialoguePrompt": "Très bien. Je m'engage à présenter ce plan à la direction avec vos trois réalisations clés. Faisons un point trimestriel.",
+          "dialoguePromptEn": "Very well. I commit to presenting this plan to leadership along with your three key achievements. Let's keep a quarterly check-in.",
+          "choices": [],
+          "isTerminal": true,
+          "terminalSummary": "Succès : vous avez transformé une évaluation décevante en plan de promotion formalisé, avec des engagements écrits et un suivi régulier."
+        },
+        {
+          "stepId": "step_passive",
+          "characterSpeaker": "Sophie (Manager)",
+          "characterRole": "Responsable hiérarchique",
+          "dialoguePrompt": "Très bien, on reverra cela dans douze mois. La réunion est terminée.",
+          "dialoguePromptEn": "Alright, we'll revisit this in twelve months. The meeting is over.",
+          "choices": [],
+          "isTerminal": true,
+          "terminalSummary": "Issue mitigée : la relation reste cordiale, mais sans défense chiffrée de vos résultats, la promotion a été reportée d'un an."
+        },
+        {
+          "stepId": "step_fail",
+          "characterSpeaker": "Sophie (Manager)",
+          "characterRole": "Responsable hiérarchique",
+          "dialoguePrompt": "Je note votre mécontentement. Nous en reparlerons quand le climat sera plus constructif.",
+          "dialoguePromptEn": "I note your dissatisfaction. We'll talk again when the climate is more constructive.",
+          "choices": [],
+          "isTerminal": true,
+          "terminalSummary": "Échec : l'entretien s'est interrompu sans engagement. Les postures défensives ou agressives annulent toute marge de négociation."
+        }
+      ]
+    },
+    {
+      "id": "sim_client_mcontent",
+      "title": "Client mécontent : livraison en retard et demande de remboursement",
+      "titleEn": "Angry Client: Late Delivery and Refund Request",
+      "context": "Un client important appelle, très en colère : sa commande phare a trois semaines de retard et il exige un remboursement intégral devant son propre comité de direction.",
+      "contextEn": "A key client calls, furious: their flagship order is three weeks late and they demand a full refund in front of their own steering committee.",
+      "category": "CLIENT",
+      "initialStepId": "step_1",
+      "steps": [
+        {
+          "stepId": "step_1",
+          "characterSpeaker": "M. Diallo (Client)",
+          "characterRole": "Directeur des achats",
+          "dialoguePrompt": "C'est scandaleux ! Trois semaines de retard, mon comité me tombe dessus. Je veux un remboursement immédiat ou je résilie le contrat !",
+          "dialoguePromptEn": "This is scandalous! Three weeks late, my committee is on my back. I want an immediate refund or I cancel the contract!",
+          "choices": [
+            {
+              "choiceId": "c1",
+              "text": "Calmez-vous, ce n'est pas de notre faute, c'est la logistique qui bloque tout le monde.",
+              "englishTranslation": "Calm down, it's not our fault, logistics is blocking everyone.",
+              "diplomacyDelta": -35,
+              "efficiencyDelta": -15,
+              "nextStepId": "step_fail",
+              "pedagogicalFeedback": "« Calmez-vous » et le rejet de responsabilité jettent de l'huile sur le feu : le client se sent nié et passe à l'action contre vous."
+            },
+            {
+              "choiceId": "c2",
+              "text": "Je comprends votre frustration et la pression de votre comité. Vous avez raison d'exiger des explications. Laissez-moi cinq minutes pour vous donner la situation réelle et un plan.",
+              "englishTranslation": "I understand your frustration and your committee's pressure. You're right to demand answers. Give me five minutes to lay out the real situation and a plan.",
+              "diplomacyDelta": 30,
+              "efficiencyDelta": 15,
+              "nextStepId": "step_2",
+              "pedagogicalFeedback": "Désamorçage classique : reconnaissance émotionnelle (« vous avez raison d'exiger… ») puis demande d'un délai court et crédible."
+            }
+          ],
+          "isTerminal": false,
+          "terminalSummary": ""
+        },
+        {
+          "stepId": "step_2",
+          "characterSpeaker": "M. Diallo (Client)",
+          "characterRole": "Directeur des achats",
+          "dialoguePrompt": "D'accord, cinq minutes. Mais si votre plan ne me convient pas, j'active la clause pénale du contrat.",
+          "dialoguePromptEn": "Fine, five minutes. But if your plan doesn't suit me, I'll invoke the contract's penalty clause.",
+          "choices": [
+            {
+              "choiceId": "c3",
+              "text": "Voici la situation : livraison finale garantie sous dix jours ouvrés, avec un geste commercial de 8% sur la facture et un reporting hebdomadaire jusqu'à réception.",
+              "englishTranslation": "Here's the situation: final delivery guaranteed within ten business days, with an 8% goodwill discount and weekly reporting until receipt.",
+              "diplomacyDelta": 25,
+              "efficiencyDelta": 30,
+              "nextStepId": "step_success",
+              "pedagogicalFeedback": "La méthode CARE : Constat honnête, Action datée, Réparation chiffrée, Engagement de suivi. Le client repart avec des garanties opposables."
+            },
+            {
+              "choiceId": "c4",
+              "text": "Franchement, on fera au plus vite, mais je ne peux rien promettre de précis.",
+              "englishTranslation": "Honestly, we'll go as fast as we can, but I can't promise anything specific.",
+              "diplomacyDelta": -15,
+              "efficiencyDelta": -30,
+              "nextStepId": "step_fail",
+              "pedagogicalFeedback": "Sans date ni compensation chiffrée, aucune promesse n'est opposable : le client conclut que vous le laissez tomber et active la pénalité."
+            }
+          ],
+          "isTerminal": false,
+          "terminalSummary": ""
+        },
+        {
+          "stepId": "step_success",
+          "characterSpeaker": "M. Diallo (Client)",
+          "characterRole": "Directeur des achats",
+          "dialoguePrompt": "C'est recevable. Envoyez-moi le plan écrit aujourd'hui, je le présente à mon comité demain.",
+          "dialoguePromptEn": "That's acceptable. Send me the written plan today, I'll present it to my committee tomorrow.",
+          "choices": [],
+          "isTerminal": true,
+          "terminalSummary": "Succès : la relation est préservée et le client obtient un engagement écrit. La gestion de crise commerciale se gagne par les faits, pas par les excuses."
+        },
+        {
+          "stepId": "step_fail",
+          "characterSpeaker": "M. Diallo (Client)",
+          "characterRole": "Directeur des achats",
+          "dialoguePrompt": "C'est terminé. Mon service juridique vous contactera pour la mise en demeure.",
+          "dialoguePromptEn": "It's over. My legal department will contact you with a formal notice.",
+          "choices": [],
+          "isTerminal": true,
+          "terminalSummary": "Échec : nier ou rester vague face à un client en colère conduit à l'escalade juridique. Reconnaître, dédommager, engager : jamais dans cet ordre-là."
+        }
+      ]
+    },
+    {
+      "id": "sim_negociation_tarifs",
+      "title": "Négociation tarifaire avec un fournisseur stratégique",
+      "titleEn": "Pricing Negotiation with a Strategic Supplier",
+      "context": "Votre fournisseur unique augmente ses prix de 12% en pleine inflation. Votre marge fond et vous devez négocier sans rompre le partenariat.",
+      "contextEn": "Your sole supplier raises prices by 12% amid inflation. Your margin is shrinking and you must negotiate without breaking the partnership.",
+      "category": "CLIENT",
+      "initialStepId": "step_1",
+      "steps": [
+        {
+          "stepId": "step_1",
+          "characterSpeaker": "Mme Chen (Fournisseur)",
+          "characterRole": "Directrice commerciale",
+          "dialoguePrompt": "Nos coûts matières explosent : +12% sur la grille, applicable au prochain trimestre. Sans cela, nous ne pouvons plus vous servir prioritairement.",
+          "dialoguePromptEn": "Raw material costs are exploding: +12% on the grid, effective next quarter. Otherwise we can no longer prioritize your supply.",
+          "choices": [
+            {
+              "choiceId": "c1",
+              "text": "Hors de question ! Trouvez d'autres clients, moi je paie le prix actuel ou rien.",
+              "englishTranslation": "No way! Find other customers, I'll pay the current price or nothing.",
+              "diplomacyDelta": -30,
+              "efficiencyDelta": -25,
+              "nextStepId": "step_fail",
+              "pedagogicalFeedback": "Un refus sec sans alternative crédible détruit la relation et vous expose à une rupture d'approvisionnement immédiate."
+            },
+            {
+              "choiceId": "c2",
+              "text": "J'entends vos tensions de coûts. Avant de parler prix, pouvons-nous examiner ensemble où créer des économies partagées ?",
+              "englishTranslation": "I hear your cost pressures. Before talking price, can we examine together where we can create shared savings?",
+              "diplomacyDelta": 25,
+              "efficiencyDelta": 20,
+              "nextStepId": "step_2",
+              "pedagogicalFeedback": "Déplacer la négociation du prix vers la valeur : c'est la technique consistant à « élargir le gâteau » avant de le partager."
+            }
+          ],
+          "isTerminal": false,
+          "terminalSummary": ""
+        },
+        {
+          "stepId": "step_2",
+          "characterSpeaker": "Mme Chen (Fournisseur)",
+          "characterRole": "Directrice commerciale",
+          "dialoguePrompt": "Je vous écoute. Mais mon conseil d'administration exige une hausse visible en résultat.",
+          "dialoguePromptEn": "I'm listening. But my board requires a visible increase in results.",
+          "choices": [
+            {
+              "choiceId": "c3",
+              "text": "Proposition : +6% seulement, compensés par un engagement de volume sur 24 mois et un paiement à 30 jours au lieu de 60.",
+              "englishTranslation": "Proposal: only +6%, offset by a 24-month volume commitment and payment at 30 days instead of 60.",
+              "diplomacyDelta": 20,
+              "efficiencyDelta": 30,
+              "nextStepId": "step_success",
+              "pedagogicalFeedback": "Vous offrez au fournisseur ce dont il a besoin vis-à-vis de son CA (volume, trésorerie) contre une hausse réduite : du donnant-donnant structuré."
+            },
+            {
+              "choiceId": "c4",
+              "text": "Faites-moi une remise de 12% et je réfléchirai à rester chez vous.",
+              "englishTranslation": "Give me a 12% discount and I'll consider staying with you.",
+              "diplomacyDelta": -20,
+              "efficiencyDelta": -10,
+              "nextStepId": "step_fail",
+              "pedagogicalFeedback": "Exiger un recul total du prix sans rien concéder n'est pas une négociation, c'est un ultimatum — et vous n'avez pas la meilleure main."
+            }
+          ],
+          "isTerminal": false,
+          "terminalSummary": ""
+        },
+        {
+          "stepId": "step_success",
+          "characterSpeaker": "Mme Chen (Fournisseur)",
+          "characterRole": "Directrice commerciale",
+          "dialoguePrompt": "C'est équilibré. Je confirme +6% avec vos engagements de volume et de délais de paiement. Avenant envoyé ce soir.",
+          "dialoguePromptEn": "That's balanced. I confirm +6% with your volume and payment-term commitments. Amended contract sent tonight.",
+          "choices": [],
+          "isTerminal": true,
+          "terminalSummary": "Succès : la hausse est absorbée à moitié et le partenariat est renforcé par des engagements réciproques signés."
+        },
+        {
+          "stepId": "step_fail",
+          "characterSpeaker": "Mme Chen (Fournisseur)",
+          "characterRole": "Directrice commerciale",
+          "dialoguePrompt": "Dans ce cas, appliquons les conditions générales actuelles. Bonne continuation.",
+          "dialoguePromptEn": "In that case, let's apply the current general terms. Best of luck.",
+          "choices": [],
+          "isTerminal": true,
+          "terminalSummary": "Échec : sortie de négociation sans alternative (MESO) préparée. On ne refuse jamais une hausse sans avoir chiffré son plan B."
+        }
+      ]
     }
   ],
   "emailTemplates": [
@@ -926,7 +1421,12 @@
       "formalityLevel": "FORMEL",
       "subjectTemplate": "Suivi de notre proposition commerciale - [NOM_PROJET]",
       "bodyTemplate": "Bonjour [TITRE_NOM],\n\nJe me permets de revenir vers vous suite à l'envoi de notre proposition commerciale concernant [NOM_PROJET], transmise le [DATE].\n\nAvez-vous eu l'opportunité d'en prendre connaissance ?\n\nJe reste à votre entière disposition pour convenir d'un échange téléphonique afin de répondre à vos éventuelles questions et adapter notre offre à vos priorités.\n\nDans l'attente de votre retour, je vous souhaite une excellente journée.\n\nBien cordialement,\n[MON_NOM]",
-      "placeholders": ["TITRE_NOM", "NOM_PROJET", "DATE", "MON_NOM"],
+      "placeholders": [
+        "TITRE_NOM",
+        "NOM_PROJET",
+        "DATE",
+        "MON_NOM"
+      ],
       "tips": "Relancez 4 à 6 jours ouvrés après l'envoi initial. Proposez toujours un échange téléphonique rapide pour lever les doutes."
     },
     {
@@ -937,7 +1437,15 @@
       "formalityLevel": "DIPLOMATE",
       "subjectTemplate": "[ARBITRAGE REQUIS] Impact sur le jalon de livraison [NOM_JALON]",
       "bodyTemplate": "Bonjour [PRENOM_MANAGER],\n\nSuite aux récents imprévus techniques sur [NOM_LOT], nous constatons un risque de glissement de calendrier de [NB_JOURS] jours sur le jalon [NOM_JALON].\n\nAfin de sécuriser la date de mise en production, deux options s'offrent à nous :\n1. Option A : Différer le sous-module secondaire au sprint suivant tout en tenant la date initiale.\n2. Option B : Conserver le périmètre complet avec un décalage de livraison au [DATE_REPORTEE].\n\nNotre recommandation technique penche pour l'Option A. Pourriez-vous nous indiquer votre arbitrage d'ici [DATE_LIMITE] ?\n\nMerci pour ton retour,\n[MON_NOM]",
-      "placeholders": ["PRENOM_MANAGER", "NOM_LOT", "NB_JOURS", "NOM_JALON", "DATE_REPORTEE", "DATE_LIMITE", "MON_NOM"],
+      "placeholders": [
+        "PRENOM_MANAGER",
+        "NOM_LOT",
+        "NB_JOURS",
+        "NOM_JALON",
+        "DATE_REPORTEE",
+        "DATE_LIMITE",
+        "MON_NOM"
+      ],
       "tips": "Présentez toujours des alternatives chiffrées avec une recommandation claire avant de demander un arbitrage."
     },
     {
@@ -948,7 +1456,19 @@
       "formalityLevel": "AGILE",
       "subjectTemplate": "Compte rendu synthétique - Point d'équipe du [DATE]",
       "bodyTemplate": "Bonjour à tous,\n\nMerci pour votre participation active au point de ce matin. Voici les décisions clés et les prochaines étapes :\n\n📌 Décisions actées :\n- [DECISION_1]\n- [DECISION_2]\n\n🚀 Actions et livrables :\n- [ACTION_1] ➔ Responsable : [RESPONSABLE_1] (Échéance : [DATE_1])\n- [ACTION_2] ➔ Responsable : [RESPONSABLE_2] (Échéance : [DATE_2])\n\nProchain point d'étape prévu le [PROCHAIN_RDV].\n\nBonne continuation,\n[MON_NOM]",
-      "placeholders": ["DATE", "DECISION_1", "DECISION_2", "ACTION_1", "RESPONSABLE_1", "DATE_1", "ACTION_2", "RESPONSABLE_2", "DATE_2", "PROCHAIN_RDV", "MON_NOM"],
+      "placeholders": [
+        "DATE",
+        "DECISION_1",
+        "DECISION_2",
+        "ACTION_1",
+        "RESPONSABLE_1",
+        "DATE_1",
+        "ACTION_2",
+        "RESPONSABLE_2",
+        "DATE_2",
+        "PROCHAIN_RDV",
+        "MON_NOM"
+      ],
       "tips": "Envoyez le compte rendu dans les 4 heures suivant la réunion pour maximiser l'engagement des parties prenantes."
     }
   ],
@@ -969,7 +1489,7 @@
       "situationLabelEn": "Audio or microphone glitch in remote meeting",
       "frenchPhrase": "Pardonnez-moi, je rencontre un souci de micro. Je vous écris directement dans le chat.",
       "englishTranslation": "Forgive me, I have a mic issue. I am typing directly in the meeting chat.",
-      "recommendedSpeed": 0.90
+      "recommendedSpeed": 0.9
     },
     {
       "id": "sos_temporisation",
@@ -996,7 +1516,7 @@
       "situationLabelEn": "Having to leave the meeting early",
       "frenchPhrase": "Navré, un engagement imprévu m'oblige à vous quitter. Je lirai attentivement le compte rendu.",
       "englishTranslation": "Apologies, an urgent commitment obliges me to drop off. I will review the minutes carefully.",
-      "recommendedSpeed": 0.90
+      "recommendedSpeed": 0.9
     }
   ]
 }
