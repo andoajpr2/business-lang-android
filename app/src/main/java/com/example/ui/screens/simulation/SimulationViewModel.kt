@@ -131,10 +131,47 @@ class SimulationViewModel(
             val result = PronunciationEvaluator.evaluate(choice.text, spokenText)
             _uiState.value = _uiState.value.copy(pronunciationResult = result)
 
+            // Alimente l'axe « Élocution & Oral » du radar de compétences
+            viewModelScope.launch {
+                userDataRepository.recordPronunciationEvaluation(
+                    expressionId = choice.choiceId,
+                    spoken = spokenText,
+                    accuracy = result.accuracyPercentage
+                )
+            }
+
             if (result.accuracyPercentage >= 65) {
                 selectChoice(choice)
             }
         }
+    }
+
+    /**
+     * Revient à la réplique précédente : annule le dernier choix effectué
+     * et recalcule les jauges à partir de l'historique restant.
+     */
+    fun goBackOneStep() {
+        val state = _uiState.value
+        val currentScenario = state.scenario ?: return
+        if (state.showFeedback || state.isFinished || state.visitedStepIds.size < 2) return
+
+        sttManager.stopListening()
+        val visited = state.visitedStepIds.dropLast(1)
+        val history = state.choiceHistory.dropLast(1)
+        val previousStep = currentScenario.steps.firstOrNull { it.stepId == visited.last() } ?: return
+        val (diplomacy, efficiency) = replayScores(history)
+
+        _uiState.value = state.copy(
+            currentStep = previousStep,
+            diplomacyScore = diplomacy,
+            efficiencyScore = efficiency,
+            selectedChoice = null,
+            showFeedback = false,
+            targetVoiceChoice = null,
+            pronunciationResult = null,
+            visitedStepIds = visited,
+            choiceHistory = history
+        )
     }
 
     fun restart() {
@@ -146,5 +183,20 @@ class SimulationViewModel(
             efficiencyScore = 50,
             visitedStepIds = listOfNotNull(initialStep?.stepId)
         )
+    }
+
+    companion object {
+        const val INITIAL_SCORE = 50
+
+        /** Rejoue les deltas des choix en appliquant le même bornage 0..100 qu'en direct. */
+        fun replayScores(history: List<SimulationChoice>): Pair<Int, Int> {
+            var diplomacy = INITIAL_SCORE
+            var efficiency = INITIAL_SCORE
+            history.forEach { choice ->
+                diplomacy = (diplomacy + choice.diplomacyDelta).coerceIn(0, 100)
+                efficiency = (efficiency + choice.efficiencyDelta).coerceIn(0, 100)
+            }
+            return diplomacy to efficiency
+        }
     }
 }

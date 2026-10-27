@@ -94,6 +94,13 @@ class SpeechToTextManager(private val context: Context) {
     }
 
     fun startListening(locale: Locale = Locale.FRENCH, onResult: (String) -> Unit) {
+        val recognizer = speechRecognizer
+        if (recognizer == null) {
+            _isListening.value = false
+            _errorMessage.value = "Reconnaissance vocale non disponible sur cet appareil"
+            return
+        }
+
         currentCallback = onResult
         _recognizedText.value = ""
         _errorMessage.value = null
@@ -106,7 +113,7 @@ class SpeechToTextManager(private val context: Context) {
         }
 
         try {
-            speechRecognizer?.startListening(intent)
+            recognizer.startListening(intent)
             _isListening.value = true
         } catch (e: Exception) {
             _isListening.value = false

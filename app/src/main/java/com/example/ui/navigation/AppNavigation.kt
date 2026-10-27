@@ -58,6 +58,7 @@ import com.example.ui.screens.search.SearchScreen
 import com.example.ui.screens.search.SearchViewModel
 import com.example.ui.screens.settings.SettingsScreen
 import com.example.ui.screens.settings.SettingsViewModel
+import com.example.ui.screens.simulation.SimulationListScreen
 import com.example.ui.screens.simulation.SimulationScreen
 import com.example.ui.screens.simulation.SimulationViewModel
 
@@ -181,7 +182,7 @@ fun AppNavigation(
             composable(Screen.Practice.route) {
                 PracticeScreen(
                     onNavigateToSimulation = {
-                        navController.navigate(Screen.Simulation.createRoute())
+                        navController.navigate(Screen.SimulationList.route)
                     },
                     onNavigateToEmailBuilder = {
                         navController.navigate(Screen.EmailBuilder.route)
@@ -348,6 +349,17 @@ fun AppNavigation(
                 SettingsScreen(
                     viewModel = settingsViewModel,
                     onBackClick = { navController.popBackStack() }
+                )
+            }
+
+            // NOUVEAUTÉ V2 : Sélecteur de scénarios du simulateur de conversation
+            composable(Screen.SimulationList.route) {
+                SimulationListScreen(
+                    scenarios = pedagogyRepository.getAllSimulations(),
+                    onBackClick = { navController.popBackStack() },
+                    onSelectScenario = { scenarioId ->
+                        navController.navigate(Screen.Simulation.createRoute(scenarioId))
+                    }
                 )
             }
 
