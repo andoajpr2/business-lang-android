@@ -27,7 +27,9 @@ data class SimulationUiState(
     val finalSummary: String = "",
     val isVoiceMode: Boolean = false,
     val pronunciationResult: PronunciationResult? = null,
-    val targetVoiceChoice: SimulationChoice? = null
+    val targetVoiceChoice: SimulationChoice? = null,
+    val visitedStepIds: List<String> = emptyList(),
+    val choiceHistory: List<SimulationChoice> = emptyList()
 )
 
 class SimulationViewModel(
@@ -50,7 +52,8 @@ class SimulationViewModel(
     private val _uiState = MutableStateFlow(
         SimulationUiState(
             scenario = scenario,
-            currentStep = initialStep
+            currentStep = initialStep,
+            visitedStepIds = listOfNotNull(initialStep?.stepId)
         )
     )
     val uiState: StateFlow<SimulationUiState> = _uiState.asStateFlow()
@@ -70,7 +73,8 @@ class SimulationViewModel(
             selectedChoice = choice,
             showFeedback = true,
             diplomacyScore = newDiplomacy,
-            efficiencyScore = newEfficiency
+            efficiencyScore = newEfficiency,
+            choiceHistory = _uiState.value.choiceHistory + choice
         )
     }
 
@@ -86,13 +90,19 @@ class SimulationViewModel(
                 finalSummary = summary,
                 showFeedback = false
             )
-            // Enregistrer dans Room
+            // Enregistrer dans Room : chemin complet de la conversation + bilan détaillé
             viewModelScope.launch {
+                val pathText = buildString {
+                    _uiState.value.choiceHistory.forEachIndexed { index, c ->
+                        append("${index + 1}. ${c.text}")
+                        if (index != _uiState.value.choiceHistory.lastIndex) append(" → ")
+                    }
+                }
                 userDataRepository.recordSimulation(
                     scenarioId = currentScenario.id,
                     diplomacy = _uiState.value.diplomacyScore,
                     efficiency = _uiState.value.efficiencyScore,
-                    pathSummary = summary
+                    pathSummary = summary + "\nChemin : $pathText"
                 )
             }
         } else {
@@ -101,7 +111,8 @@ class SimulationViewModel(
                 selectedChoice = null,
                 showFeedback = false,
                 targetVoiceChoice = null,
-                pronunciationResult = null
+                pronunciationResult = null,
+                visitedStepIds = _uiState.value.visitedStepIds + nextStep.stepId
             )
         }
     }
@@ -127,11 +138,13 @@ class SimulationViewModel(
     }
 
     fun restart() {
+        sttManager.stopListening()
         _uiState.value = SimulationUiState(
             scenario = scenario,
             currentStep = initialStep,
             diplomacyScore = 50,
-            efficiencyScore = 50
+            efficiencyScore = 50,
+            visitedStepIds = listOfNotNull(initialStep?.stepId)
         )
     }
 }

@@ -22,6 +22,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.Celebration
 import androidx.compose.material.icons.filled.Mic
@@ -34,6 +35,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.FilledIconButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -70,6 +72,15 @@ fun SimulationScreen(
     val currentStep = uiState.currentStep
     val scenario = uiState.scenario
 
+    // Scénario terminé : on propose de revenir au sélecteur de scénarios
+    val onBackFromFinish: () -> Unit = {
+        if (uiState.isFinished && scenario != null) {
+            navController?.navigate(Screen.Simulation.createRoute())
+        } else {
+            onBackClick()
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -77,7 +88,26 @@ fun SimulationScreen(
     ) {
         AppTopBar(
             title = scenario?.title ?: "Jeu de rôle professionnel",
-            onBackClick = onBackClick
+            onBackClick = {
+                if (uiState.visitedStepIds.size > 1 && !uiState.isFinished && uiState.selectedChoice == null) {
+                    viewModel.goBackOneStep()
+                } else {
+                    onBackClick()
+                }
+            },
+            actions = {
+                if (uiState.visitedStepIds.size > 1 && !uiState.isFinished && uiState.selectedChoice == null) {
+                    IconButton(
+                        onClick = { viewModel.goBackOneStep() },
+                        modifier = Modifier.testTag("sim_back_step_btn")
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "Revenir à la réplique précédente"
+                        )
+                    }
+                }
+            }
         )
 
         if (uiState.isFinished || currentStep == null) {
