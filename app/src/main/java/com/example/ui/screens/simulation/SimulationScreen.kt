@@ -1,5 +1,10 @@
 package com.example.ui.screens.simulation
 
+import android.Manifest
+import android.content.pm.PackageManager
+import androidx.activity.compose.BackHandler
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -22,7 +27,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Undo
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.Celebration
 import androidx.compose.material.icons.filled.Mic
@@ -45,15 +50,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat
 import com.example.data.model.SimulationChoice
 import com.example.ui.audio.WordStatus
 import com.example.ui.components.AppTopBar
@@ -69,16 +79,41 @@ fun SimulationScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val isListening by viewModel.sttManager.isListening.collectAsState()
+    val sttError by viewModel.sttManager.errorMessage.collectAsState()
     val currentStep = uiState.currentStep
     val scenario = uiState.scenario
+    val canGoBackOneStep = uiState.visitedStepIds.size > 1 && !uiState.isFinished && !uiState.showFeedback
 
-    // Scénario terminé : on propose de revenir au sélecteur de scénarios
-    val onBackFromFinish: () -> Unit = {
-        if (uiState.isFinished && scenario != null) {
-            navController?.navigate(Screen.Simulation.createRoute())
-        } else {
-            onBackClick()
+    // Permission micro demandée à l'exécution (obligatoire depuis Android 6)
+    val context = LocalContext.current
+    var pendingVoiceChoice by remember { mutableStateOf<SimulationChoice?>(null) }
+    var micPermissionDenied by remember { mutableStateOf(false) }
+    val micPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        micPermissionDenied = !granted
+        val choice = pendingVoiceChoice
+        pendingVoiceChoice = null
+        if (granted && choice != null) {
+            viewModel.startVoiceEvaluation(choice)
         }
+    }
+    val onMicClick: (SimulationChoice) -> Unit = { choice ->
+        val granted = ContextCompat.checkSelfPermission(
+            context, Manifest.permission.RECORD_AUDIO
+        ) == PackageManager.PERMISSION_GRANTED
+        if (granted) {
+            micPermissionDenied = false
+            viewModel.startVoiceEvaluation(choice)
+        } else {
+            pendingVoiceChoice = choice
+            micPermissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
+        }
+    }
+
+    // Le bouton retour système annule d'abord la dernière réplique
+    BackHandler(enabled = canGoBackOneStep) {
+        viewModel.goBackOneStep()
     }
 
     Column(
@@ -88,21 +123,15 @@ fun SimulationScreen(
     ) {
         AppTopBar(
             title = scenario?.title ?: "Jeu de rôle professionnel",
-            onBackClick = {
-                if (uiState.visitedStepIds.size > 1 && !uiState.isFinished && uiState.selectedChoice == null) {
-                    viewModel.goBackOneStep()
-                } else {
-                    onBackClick()
-                }
-            },
+            onBackClick = onBackClick,
             actions = {
-                if (uiState.visitedStepIds.size > 1 && !uiState.isFinished && uiState.selectedChoice == null) {
+                if (canGoBackOneStep) {
                     IconButton(
                         onClick = { viewModel.goBackOneStep() },
                         modifier = Modifier.testTag("sim_back_step_btn")
                     ) {
                         Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            imageVector = Icons.AutoMirrored.Filled.Undo,
                             contentDescription = "Revenir à la réplique précédente"
                         )
                     }
@@ -210,7 +239,7 @@ fun SimulationScreen(
                         .fillMaxWidth()
                         .height(50.dp)
                 ) {
-                    Text("Retour aux entraînements")
+                    Text("Choisir un autre scénario")
                 }
             }
         } else {
@@ -416,7 +445,7 @@ fun SimulationScreen(
 
                                 // Bouton Micro pour prononcer cette phrase oralement
                                 Button(
-                                    onClick = { viewModel.startVoiceEvaluation(choice) },
+                                    onClick = { onMicClick(choice) },
                                     enabled = !uiState.showFeedback,
                                     colors = ButtonDefaults.buttonColors(
                                         containerColor = if (isListening && isVoiceTarget) MaterialTheme.colorScheme.error
@@ -437,6 +466,22 @@ fun SimulationScreen(
                             }
                         }
                     }
+                }
+
+                // Problème de micro ou de reconnaissance vocale
+                val voiceIssue = when {
+                    micPermissionDenied -> "Autorisez l'accès au micro pour répondre à l'oral, ou touchez simplement une réponse."
+                    !isListening && uiState.targetVoiceChoice != null && uiState.pronunciationResult == null -> sttError
+                    else -> null
+                }
+                voiceIssue?.let { message ->
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = message,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.error,
+                        modifier = Modifier.testTag("sim_voice_error")
+                    )
                 }
 
                 // Résultat de l'analyse vocale

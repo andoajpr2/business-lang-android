@@ -37,6 +37,7 @@ sealed class Screen(val route: String) {
     data object Settings : Screen("settings")
 
     // Nouvelles routes V2
+    data object SimulationList : Screen("simulation_list")
     data object Simulation : Screen("simulation?scenarioId={scenarioId}") {
         fun createRoute(scenarioId: String? = null) =
             if (scenarioId != null) "simulation?scenarioId=$scenarioId" else "simulation"
