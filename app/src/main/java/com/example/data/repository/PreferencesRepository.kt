@@ -37,6 +37,26 @@ class PreferencesRepository(context: Context) {
     )
     val speechRate: StateFlow<Float> = _speechRate.asStateFlow()
 
+    private val _uiLanguage = MutableStateFlow(
+        prefs.getString(KEY_UI_LANGUAGE, "fr") ?: "fr"
+    )
+    val uiLanguage: StateFlow<String> = _uiLanguage.asStateFlow()
+
+    private val _targetLanguage = MutableStateFlow(
+        prefs.getString(KEY_TARGET_LANGUAGE, "fr") ?: "fr"
+    )
+    val targetLanguage: StateFlow<String> = _targetLanguage.asStateFlow()
+
+    fun setUiLanguage(lang: String) {
+        prefs.edit().putString(KEY_UI_LANGUAGE, lang).apply()
+        _uiLanguage.value = lang
+    }
+
+    fun setTargetLanguage(lang: String) {
+        prefs.edit().putString(KEY_TARGET_LANGUAGE, lang).apply()
+        _targetLanguage.value = lang
+    }
+
     fun setThemeMode(mode: ThemeMode) {
         prefs.edit().putString(KEY_THEME, mode.name).apply()
         _themeMode.value = mode
@@ -51,5 +71,7 @@ class PreferencesRepository(context: Context) {
     companion object {
         private const val KEY_THEME = "key_theme_mode"
         private const val KEY_SPEECH_RATE = "key_speech_rate"
+        private const val KEY_UI_LANGUAGE = "key_ui_language"
+        private const val KEY_TARGET_LANGUAGE = "key_target_language"
     }
 }

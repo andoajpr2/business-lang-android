@@ -45,6 +45,9 @@ import androidx.compose.ui.unit.dp
 import com.example.data.repository.ThemeMode
 import com.example.ui.components.AppTopBar
 
+import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.filled.Translate
+
 @Composable
 fun SettingsScreen(
     viewModel: SettingsViewModel,
@@ -52,6 +55,8 @@ fun SettingsScreen(
 ) {
     val themeMode by viewModel.themeMode.collectAsState()
     val speechRate by viewModel.speechRate.collectAsState()
+    val uiLanguage by viewModel.uiLanguage.collectAsState()
+    val targetLanguage by viewModel.targetLanguage.collectAsState()
     var showResetDialog by remember { mutableStateOf(false) }
 
     Column(
@@ -60,7 +65,7 @@ fun SettingsScreen(
             .testTag("settings_screen")
     ) {
         AppTopBar(
-            title = "Paramètres",
+            title = if (uiLanguage == "en") "Settings" else "Paramètres",
             onBackClick = onBackClick
         )
 
@@ -71,6 +76,88 @@ fun SettingsScreen(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
+            // Carte Langue de l'interface & Cible
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            imageVector = Icons.Default.Language,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(20.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = if (uiLanguage == "en") "Languages & Multilingual" else "Langues & Multilingue",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    Text(
+                        text = if (uiLanguage == "en") "UI Language :" else "Langue de l'interface :",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        FilterChip(
+                            selected = uiLanguage == "fr",
+                            onClick = { viewModel.setUiLanguage("fr") },
+                            label = { Text("🇫🇷 Français") },
+                            modifier = Modifier.weight(1f)
+                        )
+                        FilterChip(
+                            selected = uiLanguage == "en",
+                            onClick = { viewModel.setUiLanguage("en") },
+                            label = { Text("🇬🇧 English") },
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(12.dp))
+
+                    Text(
+                        text = if (uiLanguage == "en") "Target Learning Language :" else "Langue cible à pratiquer :",
+                        style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        FilterChip(
+                            selected = targetLanguage == "fr",
+                            onClick = { viewModel.setTargetLanguage("fr") },
+                            label = { Text("Français Pro") },
+                            modifier = Modifier.weight(1f)
+                        )
+                        FilterChip(
+                            selected = targetLanguage == "en",
+                            onClick = { viewModel.setTargetLanguage("en") },
+                            label = { Text("Business EN") },
+                            modifier = Modifier.weight(1f)
+                        )
+                        FilterChip(
+                            selected = targetLanguage == "both",
+                            onClick = { viewModel.setTargetLanguage("both") },
+                            label = { Text("Bilingue") },
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                }
+            }
+
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(16.dp),
@@ -86,7 +173,7 @@ fun SettingsScreen(
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
-                            text = "Thème visuel",
+                            text = if (uiLanguage == "en") "Visual Theme" else "Thème visuel",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold
                         )
@@ -100,9 +187,9 @@ fun SettingsScreen(
                     ) {
                         ThemeMode.entries.forEach { mode ->
                             val label = when (mode) {
-                                ThemeMode.SYSTEM -> "Système"
-                                ThemeMode.LIGHT -> "Clair"
-                                ThemeMode.DARK -> "Sombre"
+                                ThemeMode.SYSTEM -> if (uiLanguage == "en") "System" else "Système"
+                                ThemeMode.LIGHT -> if (uiLanguage == "en") "Light" else "Clair"
+                                ThemeMode.DARK -> if (uiLanguage == "en") "Dark" else "Sombre"
                             }
                             FilterChip(
                                 selected = themeMode == mode,
@@ -130,7 +217,7 @@ fun SettingsScreen(
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
-                            text = "Vitesse de prononciation audio",
+                            text = if (uiLanguage == "en") "Audio Voice & Speech Rate" else "Vitesse de prononciation audio",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold
                         )
@@ -139,7 +226,10 @@ fun SettingsScreen(
                     Spacer(modifier = Modifier.height(6.dp))
 
                     Text(
-                        text = "Ajustez la vitesse de diction du Text-to-Speech français (0.75x = plus lent, 1.0x = naturel).",
+                        text = if (uiLanguage == "en")
+                            "Adjust audio speech rate for TTS models in French and English (0.75x = slower, 1.0x = natural)."
+                        else
+                            "Ajustez la vitesse de diction du Text-to-Speech (0.75x = plus lent, 1.0x = naturel).",
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -157,17 +247,31 @@ fun SettingsScreen(
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.primary
                         )
-                        OutlinedButton(
-                            onClick = { viewModel.testAudio() },
-                            modifier = Modifier.testTag("test_tts_audio_btn")
-                        ) {
-                            Icon(
-                                imageVector = Icons.AutoMirrored.Filled.VolumeUp,
-                                contentDescription = null,
-                                modifier = Modifier.size(16.dp)
-                            )
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text("Tester la voix")
+                        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                            OutlinedButton(
+                                onClick = { viewModel.testAudio() },
+                                modifier = Modifier.testTag("test_tts_audio_btn")
+                            ) {
+                                Icon(
+                                    imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(16.dp)
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Text("Voix FR")
+                            }
+                            OutlinedButton(
+                                onClick = { viewModel.testEnglishAudio() },
+                                modifier = Modifier.testTag("test_tts_en_audio_btn")
+                            ) {
+                                Icon(
+                                    imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(16.dp)
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Text("Voice EN")
+                            }
                         }
                     }
 
