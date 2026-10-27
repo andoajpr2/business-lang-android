@@ -22,6 +22,6 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "Francais Pro"
+rootProject.name = "ProLang"
 
 include(":app")
